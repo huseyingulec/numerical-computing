@@ -135,6 +135,73 @@ end
 
 
 ## Interpolation (W5)
+
+```
+% interpolation Chebyshev type
+f = @(x) sqrt(1+x.^2);
+a = 0;                  % interval start
+b = 5;                  % interval end
+n = 4;                  % nodes (n-1)
+
+for i = 1:n+1
+    t(i) = -cos((((2.*i)-1)*pi)./(2*(n+1)));
+    x(i) = (((b-a)/2).* t(i)) + ((b+a)/2);
+end
+
+y = f(x);
+c = polyfit(x,y,n);
+```
+```
+% five interpolation nodes
+x = [0.0 0.5 1.0 1.5 2.0];                  % x degerlerini verildigi gibi yazdik
+f =@(x) (sin(x) - (x+1).^2)./((x.^2)+3);    %fonksiyonu da ayni sekilde
+y=f(x);
+z=1.97;
+spline(x,y,z);
+```
+```
+% not-a-knot cubic spline
+x = [-1 1 7 9 19];
+y = [4 3 10 10 9];
+z = log(0.9);
+
+spline(x,y,z);
+
+```
+```
+% coefficent of the second order term
+
+n=4;                % x,y eleman sayisi
+
+x = [1,2,3,4];
+y = [1,-1,1,-1];
+
+polyfit(x,y,n-1);
+```
+```
+% cubic spline interpolating takes the value
+x = [-5 4 5 11];
+y = [6 2 4 10];
+z = sqrt(1.8);
+
+y0 = 10;
+yn = 4;
+
+spline(x, [y0,y,yn], z);
+```
+```
+% couples higher degree interpolating the data
+n=5;
+
+x = [3 6 7 14 21];
+y = [8 4 5 5 7];
+z= exp(0.7);
+
+c = polyfit(x, y , n-1);
+polyval(c,z);
+```
+
+
 ## Linear Systems - 1 (W9)
 ## Linear Systems - 2 (W9)
 ## Eigenvalues and Matrix Factorizations (W14)
