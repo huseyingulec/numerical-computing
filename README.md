@@ -5,31 +5,33 @@ We solved questions from portale of Polito and we tried to simplify the question
 
 The course subjects divided into 7 sub-subjects in portale. 
 
-### Subjects
+## Subjects
 
-[Syntax - Level 1 (W2)](#syntax---level-1-w2)
+### [Syntax - Level 1 (W2)](#syntax---level-1-w2)
 
-[Sytanx - Level 2 (W2)](#syntax---level-2-w2)
+### [Sytanx - Level 2 (W2)](#syntax---level-2-w2)
 
-[Machine Arithmetic (W2)](#machine-arithmetic-w2)
+### [Machine Arithmetic (W2)](#machine-arithmetic-w2)
 
-[Interpolation (W5)](#interpolation-w5)
+### [Interpolation (W5)](#interpolation-w5)
 
-[Linear Systems - 1 (W9)](#linear-systems---1-w9)
+### [Linear Systems - 1 (W9)](#linear-systems---1-w9)
 
-[Linear Systems - 2 (W9)](#linear-systems---2-w9)
+### [Linear Systems - 2 (W9)](#linear-systems---2-w9)
 
-[Eigenvalues and matrix factorizations (W14)](#eigenvalues-and-matrix-factorizations-w14)
+### [Eigenvalues and matrix factorizations (W14)](#eigenvalues-and-matrix-factorizations-w14)
 
 There are also 4 summarizing tests whose questions are more indicative of the types that will be used during the final test in the lab. Several topics are addressed in each quiz.
 
-[Quiz 0 (W5)](#quiz-0-w5)
+### [Quiz 0 (W5)](#quiz-0-w5)
 
-[Quiz 1 (W9)](#quiz-1-w9)
+### [Quiz 1 (W9)](#quiz-1-w9)
 
-[Quiz 2 (W10)](#quiz-2-w10)
+### [Quiz 2 (W10)](#quiz-2-w10)
 
-[Quiz 3 (W14)](#quiz-3-w14)
+### [Quiz 3 (W14)](#quiz-3-w14)
+
+### Checkout [this section](#how-to-contribute-this-repository) below, if you want to add questions to this repository.
 
 A note from Professor; 
 1. Questions should **not be considered exhaustive of the course program**. Moreover, some questions are proposed with a high level of heterogeneity in terms of complexity.
@@ -75,3 +77,11 @@ x1=2;
 ## Quiz 1 (W9)
 ## Quiz 2 (W10)
 ## Quiz 3 (W14)
+
+### How to contribute this repository?
+1. Firstly, you can fork this repository into your github.  
+2. After making sure that the questions doesn't exist in this repository, you can add your question to the related subject with your explanation.
+3. For the question photo, it needs to be **screenshot**, not taken by a mobile phone camera from a pc/tablet.
+4. After adding, you can commit and send a pull request to this repository. 
+5. Our editors will check your request and prepare for adding to this repository.
+5. Congratulations! You have provided an important support to those who will embark on this adventure. Your name is now on the contributor list!
