@@ -1,5 +1,5 @@
 ## Numerical Computing Matlab Questions
-This repository includes matlab questions and their answer explanations of Linear Algebra and Geometry course in Politecnico di Torino. 
+This repository includes matlab questions and their answers of Linear Algebra and Geometry course in Politecnico di Torino. 
 
 We solved questions from portale of Polito and we tried to simplify the questions as much as possible with our explanations. 
 
