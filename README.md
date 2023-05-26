@@ -67,6 +67,67 @@ x1=2;
 
 ## Syntax - Level 2 (W2)
 ## Machine Arithmetic (W2)
+
+```
+% numerical cancellation
+x= 10^-6;
+y= 1 - sqrt(1+x.^2);
+y_= (-x.^2)/(1+sqrt(1+x.^2));
+error=(abs(y-y_))/(abs(y));
+
+% machine working with base N=2, t=3, -2<=q<=3 rounding to even tech. How
+% many strictly positive machine numbers exist?
+N=2;
+t=3;
+U=3;
+L=-2;
+resx = (N-1)*(N.^(t-1))*((U-L)+1);
+
+% type (?)
+x(1) = 2;
+for n = 2:40
+    x(n) = 2.^(n-1/2) .* sqrt(1-sqrt(1-(4.^(1-n) .* x(n-1).^2)));
+end
+min(abs(x-pi))/pi;  % converging to pi
+                    % y2 = pi in relative error
+
+% type 3
+x1 = 1.7;
+d1 = 2.1 * 10 ^ -9;
+x2 = 31000;
+d2 = 7.1 * 10 ^ -4;
+
+f = @(x,d) sqrt(x+d) - sqrt(x);
+fn = @(x,d) d/(sqrt(x+d)+sqrt(x));
+
+abs(f(x1,d1)-fn(x1,d1))/abs(fn(x1,d1));
+abs(f(x2,d2)-fn(x2,d2))/abs(fn(x2,d2));
+
+% relative error
+x = 10^-6;
+f1 =@(x) 1-sqrt(1+x.^2);              % ilk verilen y fonsiyonu
+y1= f1(x);
+
+f2 = @(x) -x.^2 / (1+ sqrt(1+x.^2));  % ilk verilen y fonsiyonunun eslenigiyle 
+y2 = f2(x);
+err= abs(y1-y2)/ abs(y2);             % basic rel. error
+
+% relative with abs value strictly larger than 1
+N=2;
+t=2;
+U=2;
+L=0;
+res = (N-1)*(N.^(t-1))*((U-L)+1);
+
+% unknown
+for n=1:14
+    L(n) = (1-cos(10^-n))./(10^-n)^2;
+end
+
+[min,index] = min(abs(L-1/2));
+```
+
+
 ## Interpolation (W5)
 ## Linear Systems - 1 (W9)
 ## Linear Systems - 2 (W9)
