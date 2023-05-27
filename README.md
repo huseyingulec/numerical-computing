@@ -109,6 +109,43 @@ From Matlab documentation: A./B divides each element of A by the corresponding e
 
 From Matlab documentation: contour(Z) creates a contour plot containing the isolines of matrix Z, where Z contains height values on the x-y plane. MATLAB® automatically selects the contour lines to display. The column and row indices of Z are the x and y coordinates in the plane, respectively. For more [checkout here](https://www.google.com/search?q=contour+level+curves+in+matlab&tbm=isch&ved=2ahUKEwiU8IjZjpT_AhXGyQIHHapECNMQ2-cCegQIABAA&oq=contour+level+curves+in+matlab&gs_lcp=CgNpbWcQAzoECCMQJ1CJDVjoF2DXG2gAcAB4AIABeYgBmAWSAQM4LjGYAQCgAQGqAQtnd3Mtd2l6LWltZ8ABAQ&sclient=img&ei=qT1xZNT3GMaTi-gPqomhmA0&bih=936&biw=882). Correct answer is `D`
 
+#### Q11 
+![](questions/syntaxlevel1-11.png "Q11")
+
+`.^`  Array power. From Matlab documentation: "A.^B denotes element-by-element powers. A and B must have compatible sizes. In the simplest cases, they can be the same size or one can be a scalar." We can eliminate option B, C and E from this definition. For option D, it doesn't needs to be n x n, we can use `.^` operator with 2 x 3 and 1 x 3 matrices so we can eliminate D. Correct answer is `A`
+
+#### Q12 
+![](questions/syntaxlevel1-12.png "Q12")
+
+From matlab documentation: "`>`  Greater than operator. A > B does element by element comparisons between A and B and returns an array with elements set to logical 1 (TRUE) where the relation is true and elements set to logical 0 (FALSE) where it is not." Correct answer is `E`
+
+#### Q13
+![](questions/syntaxlevel1-13.png "Q13")
+
+For this kind of questions, we need to be careful for small details. Question asked us to plot the function in an interval. We have x values in [1, 2] interval so we will use `plot` function because while using `fplot` function we define a function generally and let Matlab choose the x values and compute the y values. With this information, we can eliminate `fplot`, options B and E. In options A and C, there are typos in y function, it needs to be `y=x.^2+log(x)`. Be careful while using `.^`operator. Correct answer is `D` 
+
+#### Q14
+![](questions/syntaxlevel1-14.png "Q14")
+
+Unlike other code languages Python and Javascript, in Matlab indexing starts from 1. To get an index from given x vector, simply we can use `x(start index : number of steps : end index)`. Correct answer is `A`
+
+#### Q15
+![](questions/syntaxlevel1-15.png "Q15")
+
+From Matlab documentation: 
+```
+while expression
+    statements
+end
+
+For example: 
+while n > 1
+    n = n-1;
+end
+```
+
+
+
 ## Syntax - Level 2 (W2)
 ## Machine Arithmetic (W2)
 ## Interpolation (W5)
