@@ -46,13 +46,16 @@ A note from Professor;
 #### Q1
 ![](questions/syntax-level1-1.png "Q1")
 
-It asks us to write these equations in matlab. First, we can eliminate the wrong ones, in matlab after an `if` statement we use `elseif` statement to add another condition so we can eliminate option A, B and C. We have D and E options left. There is only one different in these options, `&&` and `&`. Both are logical `AND` operations. The `&&` though, is a "short-circuit" operator. From the MATLAB docs:
-```
-They are short-circuit operators in that they evaluate their second operand only when the result is not fully determined by the first operand. 
+It asks us to write these equations in matlab. First, we can eliminate the wrong ones, in matlab after an `if` statement we use `elseif` statement to add another condition so we can eliminate option A, B and C. We have D and E options left. There is only one different in these options, `&&` and `&`. Both are logical `AND` operations. The `&&` though, is a "short-circuit" operator. 
+
+From the MATLAB documentation: "They are short-circuit operators in that they evaluate their second operand only when the result is not fully determined by the first operand."
+
 For example:
+
 A & B (A and B are evaluated)
+
 A && B (B is only evaluated if A is true)
-```
+
 So the correct answer will be `E`
 
 #### Q2
