@@ -150,6 +150,63 @@ Correct answer is `D`
 ## Syntax - Level 2 (W2)
 ## Machine Arithmetic (W2)
 ## Interpolation (W5)
+#### Q1
+
+![](questions/interpolation-1.png "Interpolation Q1")
+
+In the problem, we have a function called f(x) = (1 - x^2)x^3. We want to find a polynomial, let's call it p(x), that passes through 7 equally spaced points on the interval from 0 to 1.
+
+The degree of a polynomial tells us the highest power of x in that polynomial. To find the degree of the interpolating polynomial, we need to determine the minimum degree required to accurately represent the function f(x) using those 7 points.
+
+In this case, the interpolating polynomial p(x) is expected to have a minimum degree equal to the number of points minus 1, which in this case is 7 - 1 = 6. However, the polynomial p(x) = x^3 - x^5 has a degree of 5, which is less than 6.
+
+Since the degree of p(x) is lower than the minimum required degree of 6, we cannot use p(x) to accurately interpolate the function f(x) on the given points.
+
+Therefore, the correct answer is E) no, since the interpolating polynomial has a minimum degree equal to 6.
+
+#### Q2
+
+![](questions/interpolation-2.png "Interpolation Q2")
+
+
+#### Q3
+
+![](questions/interpolation-3.png "Interpolation Q3")
+
+To interpolate the function f(x) = sin(x) with a polynomial of higher degree using 5 linearly spaced nodes in the interval [0, π], including the extrema, When we say "linearly spaced nodes including extrema," it means that we want to choose equidistant points within the interval [0, π], with the endpoints 0 and π included. In this case, with 5 linearly spaced nodes, we will have the following x-values:
+
+x = [0, π/4, π/2, 3π/4, π]
+
+Including the extrema ensures that the interpolation polynomial will pass through those specific points as well.
+we can use the MATLAB instructions as follows:
+1. Define the x-values of the 5 linearly spaced nodes, including the extrema:
+
+2. Calculate the y-values of the function f(x) = sin(x) at the given x-values:
+
+3. Use the `polyfit` function in MATLAB to fit a polynomial of a higher degree to the data points.
+
+For interpolation with 5 points, a polynomial of degree 4 can perfectly fit the data points, as it can pass through all 5 points. Thus, you would typically use a polynomial of degree 4 for this case.
+
+Therefore, you should input a degree of 4 when using the polyfit function to fit the polynomial to the 5 data points.
+
+4. Evaluate the polynomial at x = π/8 to find the value of the interpolating polynomial at that point:
+
+The `polyval` function returns the value of the polynomial `p` at the point `x1`.
+
+By following these steps, you can interpolate the function sin(x) with a polynomial of higher degree using 5 linearly spaced nodes in the interval [0, π]. The value of the interpolating polynomial at x = π/8 will be stored in the variable `y1`.
+```
+clear all
+x=linspace(0,pi,5); 
+y = sin(x);
+p = polyfit(x,y,4);
+x1= pi/8;
+y1= polyval(p,x1)
+```
+#### Q4
+#### Q5
+#### Q6
+
+
 ## Linear Systems - 1 (W9)
 ## Linear Systems - 2 (W9)
 ## Eigenvalues and Matrix Factorizations (W14)
