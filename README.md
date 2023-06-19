@@ -7,29 +7,29 @@ The course subjects divided into 7 sub-subjects in portale.
 
 ## Subjects
 
-### [Syntax - Level 1 (W2)](#syntax---level-1-w2)
+### [Syntax - Level 1 (W2)](#syntax---level-1-w2-1)
 
-### [Sytanx - Level 2 (W2)](#syntax---level-2-w2)
+### [Sytanx - Level 2 (W2)](#syntax---level-2-w2-1)
 
-### [Machine Arithmetic (W2)](#machine-arithmetic-w2)
+### [Machine Arithmetic (W2)](#machine-arithmetic-w2-1)
 
-### [Interpolation (W5)](#interpolation-w5)
+### [Interpolation (W5)](#interpolation-w5-1)
 
-### [Linear Systems - 1 (W9)](#linear-systems---1-w9)
+### [Linear Systems - 1 (W9)](#linear-systems---1-w9-1)
 
-### [Linear Systems - 2 (W9)](#linear-systems---2-w9)
+### [Linear Systems - 2 (W9)](#linear-systems---2-w9-1)
 
-### [Eigenvalues and matrix factorizations (W14)](#eigenvalues-and-matrix-factorizations-w14)
+### [Eigenvalues and matrix factorizations (W14)](#eigenvalues-and-matrix-factorizations-w14-1)
 
 There are also 4 summarizing tests whose questions are more indicative of the types that will be used during the final test in the lab. Several topics are addressed in each quiz.
 
-### [Quiz 0 (W5)](#quiz-0-w5)
+### [Quiz 0 (W5)](#quiz-0-w5-1)
 
-### [Quiz 1 (W9)](#quiz-1-w9)
+### [Quiz 1 (W9)](#quiz-1-w9-1)
 
-### [Quiz 2 (W10)](#quiz-2-w10)
+### [Quiz 2 (W10)](#quiz-2-w10-1)
 
-### [Quiz 3 (W14)](#quiz-3-w14)
+### [Quiz 3 (W14)](#quiz-3-w14-1)
 
 ### Checkout [this section](#how-to-contribute-this-repository) below, if you want to add questions to this repository.
 
@@ -148,7 +148,13 @@ Correct answer is `D`
 
 
 ## Syntax - Level 2 (W2)
+
+***Questions will be added for this subject.***
+
 ## Machine Arithmetic (W2)
+
+***Questions will be added for this subject.***
+
 ## Interpolation (W5)
 #### Q1
 
@@ -168,6 +174,7 @@ Therefore, the correct answer is E) no, since the interpolating polynomial has a
 
 ![](questions/interpolation-2.png "Interpolation Q2")
 
+An explanation will be added for this question.
 
 #### Q3
 
@@ -208,12 +215,33 @@ y1= polyval(p,x1)
 
 
 ## Linear Systems - 1 (W9)
+
+***Questions will be added for this subject.*** 
+
 ## Linear Systems - 2 (W9)
+
+***Questions will be added for this subject.***
+
 ## Eigenvalues and Matrix Factorizations (W14)
+
+***Questions will be added for this subject.***
+
 ## Quiz 0 (W5)
+
+
+***Questions will be added for this subject.***
+
 ## Quiz 1 (W9)
+
+***Questions will be added for this subject.***
+
 ## Quiz 2 (W10)
+
+***Questions will be added for this subject.***
+
 ## Quiz 3 (W14)
+
+***Questions will be added for this subject.***
 
 ### How to contribute this repository?
 1. Firstly, you can fork this repository into your github.  
