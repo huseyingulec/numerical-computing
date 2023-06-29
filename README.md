@@ -9,7 +9,7 @@ The course subjects divided into 7 sub-subjects in portale.
 
 ### [Syntax - Level 1 (W2)](#syntax---level-1-w2-1)
 
-### [Sytanx - Level 2 (W2)](#syntax---level-2-w2-1)
+### [Sytanx - Level 2 (W2)](#syntax---level-2-w2)
 
 ### [Machine Arithmetic (W2)](#machine-arithmetic-w2-1)
 
