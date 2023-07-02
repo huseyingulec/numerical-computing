@@ -44,7 +44,7 @@ A note from Professor;
 
 ## Syntax - Level 1 (W2)
 #### Q1
-![](questions/syntax-level1-1.png "Q1")
+![](questions/syntax-level1/syntax-level1-1.png "Q1")
 
 It asks us to write these equations in matlab. First, we can eliminate the wrong ones, in matlab after an `if` statement we use `elseif` statement to add another condition so we can eliminate option A, B and C. We have D and E options left. There is only one different in these options, `&&` and `&`. Both are logical `AND` operations. The `&&` though, is a "short-circuit" operator. 
 
@@ -59,7 +59,7 @@ A && B (B is only evaluated if A is true)
 So the correct answer will be `E`
 
 #### Q2
-![](questions/syntaxlevel1-2.png "Q2")
+![](questions/syntax-level1/syntaxlevel1-2.png "Q2")
 
 `x & y` performs a logical `AND` of arrays x and y and returns an array containing elements set to either logical 1 (true) or logical 0 (false). An element of the output array is set to logical 1 (true) if both x and y contain a **nonzero** element at that same array location. Otherwise, the array element is set to 0.
 
@@ -68,69 +68,69 @@ So the correct answer will be `E`
 `x&(~y)` returns a logical array of [0, 0, 0, 0, 0, 0] because we are taking their intersection. For this `&` operator to return a nonzero number, we need nonzero numbers both from x and y. Correct answer is `C`
 
 #### Q3
-![](questions/syntaxlevel1-3.png "Q3")
+![](questions/syntax-level1/syntaxlevel1-3.png "Q3")
 
 A polyline is a list of points, where line segments are drawn between consecutive points.
 
 While plotting, we can use different styles to plot our graph. There are some shorcuts for colors such as `r` is for red, `g` is for green etc. Also there are some shortcuts for line styles such as `-` is for solid line, `--` is for dashed line, `:` is for dotted line etc. So the correct answer will be `A`.
 
 #### Q4
-![](questions/syntaxlevel1-4.png "Q4")
+![](questions/syntax-level1/syntaxlevel1-4.png "Q4")
 
 From Matlab documentation: `clc` clears all the text from the Command Window, resulting in a clear screen. Correct answer is `A`
 
 #### Q5
-![](questions/syntaxlevel1-5.png "Q5")
+![](questions/syntax-level1/syntaxlevel1-5.png "Q5")
 
 In this question, we were asked 10 **sub-intervals**. linspace function creates n points between x and y but it creates n-1 sub-intervals between x and y points. So for this question, we need to choose linspace(-1,1,11) to get a 10 subintervals. Correct answer is `C` 
 
 #### Q6
-![](questions/syntaxlevel1-6.png "Q6")
+![](questions/syntax-level1/syntaxlevel1-6.png "Q6")
 
 In this question, to divide the interval into `N` sub-intervals we need to use linspace(x,y,n+1) because linspace divides the intervals into n-1 sub-intervals but we need N amount of sub-intervals. We need to read carefully. Correct answer is `D`
 
 #### Q7
-![](questions/syntaxlevel1-7.png "Q7")
+![](questions/syntax-level1/syntaxlevel1-7.png "Q7")
 
 From Matlab documentation: `clear` removes all variables from the current workspace, releasing them from system memory. `clear` removes a global variable from the current workspace but not other workspaces. Correct answer is `B`
 
 #### Q8
-![](questions/syntaxlevel1-8.png "Q8")
+![](questions/syntax-level1/syntaxlevel1-8.png "Q8")
 
 `A == B` returns a logical array with elements set to logical 1 (true) where arrays A and B are equal; otherwise, the element is logical 0 (false). In this question fourth elements and seventh elements of x and y is equal so the answer will be [0 0 0 1 0 0 1]. Correct answer is `C`
 
 #### Q9
-![](questions/syntaxlevel1-9.png "Q9")
+![](questions/syntax-level1/syntaxlevel1-9.png "Q9")
 
 From Matlab documentation: A./B divides each element of A by the corresponding element of B. A and B must have compatible sizes. In the simplest cases, they can be the same size or one can be a scalar. Correct answer is `A`
 
 #### Q10
-![](questions/syntaxlevel1-10.png "Q10")
+![](questions/syntax-level1/syntaxlevel1-10.png "Q10")
 
 From Matlab documentation: contour(Z) creates a contour plot containing the isolines of matrix Z, where Z contains height values on the x-y plane. MATLAB® automatically selects the contour lines to display. The column and row indices of Z are the x and y coordinates in the plane, respectively. For more [checkout here](https://www.google.com/search?q=contour+level+curves+in+matlab&tbm=isch&ved=2ahUKEwiU8IjZjpT_AhXGyQIHHapECNMQ2-cCegQIABAA&oq=contour+level+curves+in+matlab&gs_lcp=CgNpbWcQAzoECCMQJ1CJDVjoF2DXG2gAcAB4AIABeYgBmAWSAQM4LjGYAQCgAQGqAQtnd3Mtd2l6LWltZ8ABAQ&sclient=img&ei=qT1xZNT3GMaTi-gPqomhmA0&bih=936&biw=882). Correct answer is `D`
 
 #### Q11 
-![](questions/syntaxlevel1-11.png "Q11")
+![](questions/syntax-level1/syntaxlevel1-11.png "Q11")
 
 `.^`  Array power. From Matlab documentation: "A.^B denotes element-by-element powers. A and B must have compatible sizes. In the simplest cases, they can be the same size or one can be a scalar." We can eliminate option B, C and E from this definition. For option D, it doesn't needs to be n x n, we can use `.^` operator with 2 x 3 and 1 x 3 matrices so we can eliminate D. Correct answer is `A`
 
 #### Q12 
-![](questions/syntaxlevel1-12.png "Q12")
+![](questions/syntax-level1/syntaxlevel1-12.png "Q12")
 
 From matlab documentation: "`>`  Greater than operator. A > B does element by element comparisons between A and B and returns an array with elements set to logical 1 (TRUE) where the relation is true and elements set to logical 0 (FALSE) where it is not." Correct answer is `E`
 
 #### Q13
-![](questions/syntaxlevel1-13.png "Q13")
+![](questions/syntax-level1/syntaxlevel1-13.png "Q13")
 
 For this kind of questions, we need to be careful for small details. Question asked us to plot the function in an interval. We have x values in [1, 2] interval so we will use `plot` function because while using `fplot` function we define a function generally and let Matlab choose the x values and compute the y values. With this information, we can eliminate `fplot`, options B and E. In options A and C, there are typos in y function, it needs to be `y=x.^2+log(x)`. Be careful while using `.^`operator. Correct answer is `D` 
 
 #### Q14
-![](questions/syntaxlevel1-14.png "Q14")
+![](questions/syntax-level1/syntaxlevel1-14.png "Q14")
 
 Unlike other code languages Python and Javascript, in Matlab indexing starts from 1. To get an index from given x vector, simply we can use `x(start index : number of steps : end index)`. Correct answer is `A`
 
 #### Q15
-![](questions/syntaxlevel1-15.png "Q15")
+![](questions/syntax-level1/syntaxlevel1-15.png "Q15")
 
 From Matlab documentation: 
 ```
@@ -158,7 +158,7 @@ Correct answer is `D`
 ## Interpolation (W5)
 #### Q1
 
-![](questions/interpolation-1.png "Interpolation Q1")
+![](questions/interpolation/interpolation-1.png "Interpolation Q1")
 
 In the problem, we have a function called f(x) = (1 - x^2)x^3. We want to find a polynomial, let's call it p(x), that passes through 7 equally spaced points on the interval from 0 to 1.
 
@@ -172,13 +172,13 @@ Therefore, the correct answer is E) no, since the interpolating polynomial has a
 
 #### Q2
 
-![](questions/interpolation-2.png "Interpolation Q2")
+![](questions/interpolation/interpolation-2.png "Interpolation Q2")
 
 An explanation will be added for this question.
 
 #### Q3
 
-![](questions/interpolation-3.png "Interpolation Q3")
+![](questions/interpolation/interpolation-3.png "Interpolation Q3")
 
 To interpolate the function f(x) = sin(x) with a polynomial of higher degree using 5 linearly spaced nodes in the interval [0, π], including the extrema, When we say "linearly spaced nodes including extrema," it means that we want to choose equidistant points within the interval [0, π], with the endpoints 0 and π included. In this case, with 5 linearly spaced nodes, we will have the following x-values:
 
