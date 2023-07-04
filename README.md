@@ -287,6 +287,38 @@ Last line retrives the value at the third row and third column of the resulting 
 
 Correct answer is 4.47e-02, in this case, `C`
 
+#### Q11
+
+![](questions/eigenvalues/eigen-11.jpg.png "Eigenvalues Q11")
+
+In this question, we are given a matrix A of order 4, and the eigenvalues of A are 3, 5i, -5i, and -8.
+
+The power method is an iterative algorithm used to find the dominant eigenvalue and its corresponding eigenvector of a matrix. It relies on the observation that if you repeatedly multiply a vector by a matrix and normalize the result, it will converge towards the eigenvector associated with the dominant eigenvalue. The algorithm assumes that the matrix has a dominant eigenvalue, meaning an eigenvalue with the largest magnitude.
+
+For option A, "The convergence of the power method depends on the choice of the initial guess that initializes the iterative process."
+
+-The convergence of the power method does not depend on the choice of the initial guess that initializes the iterative process. The power method is designed to converge to the dominant eigenvalue regardless of the initial guess, as long as the matrix has a dominant eigenvalue.
+
+-The power method relies on the repeated multiplication of a vector by the matrix, normalizing it at each iteration. This iterative process gradually aligns the vector with the eigenvector corresponding to the dominant eigenvalue. The convergence behavior depends on the matrix itself, particularly its eigenvalue distribution, rather than the initial guess.
+
+For option B, "The power method converges to 3."
+
+-This option is false. The power method converges to the dominant eigenvalue, which is the eigenvalue with the largest magnitude. In this case, the eigenvalue with the largest magnitude is -8, not 3.
+
+For option C, "The power method does not converge because A has two maximum magnitude eigenvalues, 5i and -5i."
+
+-This option is false. While it is true that matrix A has two eigenvalues with the same maximum magnitude (5i and -5i), the power method can still converge in such cases. It converges to the dominant eigenvalue, which is the eigenvalue with the largest magnitude. In this case, the dominant eigenvalue is -8.
+
+For option D, "The power method converges to -8."
+
+-This option is true. As explained earlier, the power method converges to the dominant eigenvalue, which is the eigenvalue with the largest magnitude. In this case, the dominant eigenvalue is -8. Therefore, the power method converges to -8.
+
+For option E, "The power method converges to 8."
+
+-This option is false. The power method converges to the dominant eigenvalue, which is the eigenvalue with the largest magnitude. In this case, the dominant eigenvalue is -8, not 8.
+
+Correct answer is `D`. 
+
 ## Quiz 0 (W5)
 
 
