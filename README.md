@@ -225,6 +225,35 @@ y1= polyval(p,x1)
 ## Eigenvalues and Matrix Factorizations (W14)
 
 ***Questions will be added for this subject.***
+#### Q9
+![](questions/eigenvalues/eigen-9.jpg)
+
+The question is asking us to perform 8 iterations of the QR method on the Hilbert matrix of order 12, starting with matrix A₀ = A. The Hilbert matrix is a specific type of matrix where its entries are given by the formula A(i, j) = 1 / (i + j - 1).
+
+The QR method is an iterative numerical algorithm used to find the eigenvalues (and eigenvectors) of a matrix. In each iteration, the matrix A is decomposed into a product of an orthogonal matrix Q and an upper triangular matrix R. The resulting matrix R is then multiplied by Q to obtain the updated matrix A for the next iteration which is A = R*Q in matlab.
+
+The question specifically asks for the approximate value of element A₈(3,3) after 8 iterations of the QR method. This means we need to perform the QR iterations as described above and retrieve the value at the third row and third column of the resulting matrix A after 8 iterations.
+
+``` 
+clear all 
+
+format long e
+
+A = hilb(12);
+for i=1:8
+    [Q, R] = qr(A);
+    A = R*Q;
+end
+A(3,3)
+
+```
+First line creates a 12x12 Hilbert matrix and assigns it to the variable A. The hilb function generates the Hilbert matrix based on the specified order, in this case, 12.
+
+The for loop performs 8 iterations of the QR method. In each iteration, the qr function decomposes matrix A into an orthogonal matrix Q and an upper triangular matrix R. The updated matrix A is obtained by multiplying R and Q. This process is repeated 8 times, as indicated by the loop.
+
+Last line retrives the value at the third row and third column of the resulting matrix A after 8 iterations of the QR method.
+
+Correct answer is 4.47e-02, in this case, `C`
 
 ## Quiz 0 (W5)
 
