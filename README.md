@@ -224,7 +224,70 @@ y1= polyval(p,x1)
 
 ## Eigenvalues and Matrix Factorizations (W14)
 
-***Questions will be added for this subject.***
+#### Q1
+
+![](questions/eigenvalues/eigen-1.jpg "Eigenvalues Q1")
+
+The question asks us to find the spectral radius of a matrix A. Matrix A defined specifically in the question so we will create the matrix in a for loop.
+
+The spectral radius of a matrix is the maximum magnitude of its eigenvalues. In other words, it is the largest absolute value among the eigenvalues of the matrix.
+
+```
+clear all
+n = 12; % Order of the matrix A
+A = zeros(n);
+
+for i = 1:n
+    for j = 1:n
+        if i == j
+            A(i,j) = 2*i;
+        elseif i < j
+            A(i,j) = -2/j;
+        elseif i > j
+            A(i,j) = 2/j;
+        end
+    end
+end
+format default
+max(eig(A))
+```
+
+Correct answer is 23.9216, in this case, `E`.
+
+#### Q2
+
+![](questions/eigenvalues/eigen-2.jpg "Eigenvalues Q2")
+
+The question asks us to analyze the properties of a given matrix B.
+
+First of, we can find the matrix B by using basic matlab code. 
+
+```
+clear all
+A = [2 3 1; 3 4 0; 4 6 3];
+B = A'*A
+
+ans = 
+        B =
+
+            29    42    14
+            42    61    21
+            14    21    10
+```
+
+With this information, we can analyze given statements in the question. 
+
+In option A, it is said that matrix B is not symmetric which means matrix B does not equal to its transpose but as we saw from the matrix B, it is symmetric so option A is false.
+
+In linear algebra, a square matrix B is said to be diagonalizable if it can be written in the form B = PDP', where P is an orthogonal matrix and D is a diagonal matrix. In option B, it is said that the matrix B is diagonalizable by orthogonal matrices which means that we can find an orthogonal matrix P and a diagonal matrix D such that B = PDP'. In the context of the given matrix B, we know that B is symmetric. For symmetric matrices, it is always possible to diagonalize them using orthogonal matrices. This property is known as the Spectral Theorem for Symmetric Matrices so option B is True.
+
+In option C, it is said that the matrix norm of B, ||B||_2, is approximately 10. We can find this by using matlab code after creating matrix B, ```norm(B, 2)``` so in this case it is 97,2442, approximately 100. Therefore, the option C is false.
+
+In option D, it is said that the matrix B does not have three real positive eigenvalues. However, based on the given matrix B, we can find that all its eigenvalues(by using ```eig(B)``` code) (approximately  0.0037, 2.7521, 97.2442) are real and positive. Therefore, the option D is false.
+
+In option E, it is said that the matrix B does not have three orthogonal eigenvalues. This option implies that the eigenvalues of B are not mutually orthogonal. To determine whether this is true, we need to calculate the eigenvectors of B. However, the given information does not provide us with the eigenvectors. Therefore, we cannot conclude whether B has three orthogonal eigenvalues or not.
+
+Correct answer is `B`.
 
 #### Q7
 
