@@ -264,15 +264,15 @@ First of, we can find the matrix B by using basic matlab code.
 
 ```
 clear all
-A = [2 3 1; 3 4 0; 4 6 3];
+A = [2 3 4; 3 4 6; 1 0 3];
 B = A'*A
 
 ans = 
         B =
 
-            29    42    14
-            42    61    21
-            14    21    10
+            14    18    29
+            18    25    36
+            29    36    61
 ```
 
 With this information, we can analyze given statements in the question. 
@@ -288,6 +288,36 @@ In option D, it is said that the matrix B does not have three real positive eige
 In option E, it is said that the matrix B does not have three orthogonal eigenvalues. This option implies that the eigenvalues of B are not mutually orthogonal. To determine whether this is true, we need to calculate the eigenvectors of B. However, the given information does not provide us with the eigenvectors. Therefore, we cannot conclude whether B has three orthogonal eigenvalues or not.
 
 Correct answer is `B`.
+
+#### Q5
+
+![](questions/eigenvalues/eigen-5.jpg "Eigenvalues Q5")
+
+The question involves solving a linear system Ax = b, where matrix A is a tridiagonal matrix and vector b has equally spaced values. The SVD (Singular Value Decomposition) method is used to solve the system.
+
+```
+clear all
+n = 18;  % order of the matrix
+A = diag(6*ones(n,1)) + diag(3*ones(n-1,1), 1) + diag(-3*ones(n-1,1), -1);
+b = linspace(0, 1, n)';
+
+[U, S, V] = svd(A);
+y = inv(S) * (U' * b); % also works S \ (U' * b)
+x = V * y;
+
+norm(x, 2) + norm(y, 2)
+
+```
+
+First we defined matrix A as a tridiagonal matrix of order 18, with diagonal elements equal to 6, upper diagonal elements equal to 3, and lower diagonal elements equal to -3. Vector b is constructed with equally spaced values in the range [0, 1].
+
+Then we used svd function which is computes the singular value decomposition of matrix A. The output consists of three matrices: U, S, and V. U and V are orthogonal matrices, and S is a diagonal matrix containing the singular values of A.
+
+The equation Ax = b is solved by multiplying the pseudo-inverse of A, given by inv(S) * (U' * b), with b. The resulting vector y represents the solution of the linear system with the coefficient matrix S. Then, the solution vector x is obtained by multiplying V with y.
+
+Finally we calculate the quantity ||x||_2 + ||y||_2 by using `norm` function.
+
+Correct answer is 8.1298e-01, in this case, `A`.
 
 #### Q7
 
@@ -426,7 +456,7 @@ Then we used eigs function which is used to calculate the eigenvalues and eigenv
 
 By using this syntax (`[z, D]`), we assign the computed eigenvector to the variable `z` and the computed eigenvalue to the variable `D`. This allows us to access and use these values later in the code.
 
-The eigenvector `z` obtained from the eigs function is normalized by dividing it by its 2-norm, computed using the norm function. This step ensures that the resulting eigenvector w has a Euclidean norm of 1.
+The eigenvector `z` obtained from the eigs function is normalized by dividing it by its 2-norm, computed using the norm function. This step ensures that the resulting eigenvector `w` has a Euclidean norm of 1.
 
 Finally, the norm function is used to calculate the 1-norm of the normalized eigenvector `w`. The norm is computed by summing the absolute values of its elements.
 
