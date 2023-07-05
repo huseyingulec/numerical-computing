@@ -510,7 +510,25 @@ The eigenvector `z` obtained from the eigs function is normalized by dividing it
 
 Finally, the norm function is used to calculate the 1-norm of the normalized eigenvector `w`. The norm is computed by summing the absolute values of its elements.
 
-Correct answer is 8.4837e+00, in this case, `B`
+Correct answer is 8.4837e+00, in this case, `B`.
+
+#### Q13
+
+![](questions/eigenvalues/eigen-13.png "Eigenvalues Q13")
+
+The question is related to the conditioning number of the Hilbert matrix of order n and its eigenvalues. The Hilbert matrix is a specific type of matrix that has entries defined as H(i,j) = 1 / (i + j - 1), where i and j are the row and column indices, respectively.
+
+The conditioning number measures the sensitivity of a problem to changes in its input. In this case, it refers to the sensitivity of computing the eigenvalues of the Hilbert matrix to perturbations or errors in the matrix.
+
+The Hilbert matrix is well-known for being ill-conditioned, meaning that small changes in its entries can lead to large changes in its eigenvalues. However, the specific value of the conditioning number (K) depends on the size (order) of the matrix.
+
+For small values of n (order of the matrix), the Hilbert matrix has a relatively low conditioning number. As n increases, the conditioning number grows rapidly, indicating increased sensitivity to perturbations.
+
+However, without knowing the size n of the matrix in the given question, we cannot determine the exact conditioning number. Therefore, the most conservative assumption we can make is that K<10, implying that the conditioning number is less than 10.
+
+This assumption is based on the fact that for small to moderate values of n, the conditioning number of the Hilbert matrix tends to be less than 10. It allows for a more general and cautious statement without relying on specific matrix sizes.
+
+Correct answer is `A`.
 
 ## Quiz 0 (W5)
 
