@@ -249,7 +249,7 @@ for i = 1:n
     end
 end
 format default
-max(eig(A))
+max(abs(eig(A)))
 ```
 
 Correct answer is 23.9216, in this case, `E`.
@@ -352,7 +352,7 @@ Correct answer is 4.47e-02, in this case, `C`
 
 #### Q11
 
-![](questions/eigenvalues/eigen-11.jpg.png "Eigenvalues Q11")
+![](questions/eigenvalues/eigen-11.png "Eigenvalues Q11")
 
 In this question, we are given a matrix A of order 4, and the eigenvalues of A are 3, 5i, -5i, and -8.
 
@@ -381,6 +381,56 @@ For option E, "The power method converges to 8."
 -This option is false. The power method converges to the dominant eigenvalue, which is the eigenvalue with the largest magnitude. In this case, the dominant eigenvalue is -8, not 8.
 
 Correct answer is `D`. 
+
+#### Q12
+
+![](questions/eigenvalues/eigen-12.png "Eigenvalues Q12")
+
+The question asks us to perform calculations on a given matrix A and find the 1-norm of a specific eigenvector.
+
+The matrix A is of order 100, meaning it is a square matrix with dimensions 100x100. The elements of A are defined using the formula a_{ij}=(1+i+j)/(1+|i-j|), where i and j are the row and column indices, respectively.
+
+Our task is to find the eigenvalue of A that is closest to p=100. An eigenvalue of a matrix is a scalar value that, when multiplied by its corresponding eigenvector, gives back the same vector. In this case, we need to find the eigenvalue that is closest to p=100.
+
+Once we find the closest eigenvalue, we are asked to find the corresponding eigenvector and normalize it such that its 2-norm (Euclidean norm) is equal to 1.
+
+Finally, we need to calculate the 1-norm of the normalized eigenvector. The 1-norm of a vector is the sum of the absolute values of its elements.
+
+```
+clear all
+n = 100;
+A = zeros(n); 
+
+for i=1:n
+    for j=1:n
+        A(i,j)=(1+i+j)/(1+abs(i-j));
+    end
+end
+
+p=100;
+[z,D]=eigs(A,1,p);
+
+w=z/norm(z);
+format short e
+norm(w,1)
+```
+
+In the matlab code, first we have defined our order(n) and an empty matrix A with zeros(100). Then we defined the matrix A with given formula inside of a for loop.
+
+Then we set `p` to 100, which indicates the desired number of eigenvalues and eigenvectors to be computed.
+
+Then we used eigs function which is used to calculate the eigenvalues and eigenvectors of matrix A. The function call eigs(A, 1, p) indicates that we want to compute one eigenvalue/vector pair, and the value of p is used as a parameter to guide the selection of the eigenvalue. The function returns two outputs: `z` and `D`.
+
+1. `z` is a column vector representing the eigenvector corresponding to the computed eigenvalue. It is the solution of the eigenvalue problem.
+2. `D` is a diagonal matrix containing the computed eigenvalues. Since we requested only one eigenvalue/vector pair, D will be a 1x1 matrix with the computed eigenvalue.
+
+By using this syntax (`[z, D]`), we assign the computed eigenvector to the variable `z` and the computed eigenvalue to the variable `D`. This allows us to access and use these values later in the code.
+
+The eigenvector `z` obtained from the eigs function is normalized by dividing it by its 2-norm, computed using the norm function. This step ensures that the resulting eigenvector w has a Euclidean norm of 1.
+
+Finally, the norm function is used to calculate the 1-norm of the normalized eigenvector `w`. The norm is computed by summing the absolute values of its elements.
+
+Correct answer is 8.4837e+00, in this case, `B`
 
 ## Quiz 0 (W5)
 
