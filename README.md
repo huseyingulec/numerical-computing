@@ -281,7 +281,7 @@ In option A, it is said that matrix B is not symmetric which means matrix B does
 
 In linear algebra, a square matrix B is said to be diagonalizable if it can be written in the form B = PDP', where P is an orthogonal matrix and D is a diagonal matrix. In option B, it is said that the matrix B is diagonalizable by orthogonal matrices which means that we can find an orthogonal matrix P and a diagonal matrix D such that B = PDP'. In the context of the given matrix B, we know that B is symmetric. For symmetric matrices, it is always possible to diagonalize them using orthogonal matrices. This property is known as the Spectral Theorem for Symmetric Matrices so option B is True.
 
-In option C, it is said that the matrix norm of B, ||B||_2, is approximately 10. We can find this by using matlab code after creating matrix B, ```norm(B, 2)``` so in this case it is 97,2442, approximately 100. Therefore, the option C is false.
+In option C, it is said that the matrix norm of B, is approximately 10. We can find this by using matlab code after creating matrix B, ```norm(B, 2)``` so in this case it is 97,2442, approximately 100. Therefore, the option C is false.
 
 In option D, it is said that the matrix B does not have three real positive eigenvalues. However, based on the given matrix B, we can find that all its eigenvalues(by using ```eig(B)``` code) (approximately  0.0037, 2.7521, 97.2442) are real and positive. Therefore, the option D is false.
 
@@ -318,6 +318,56 @@ The equation Ax = b is solved by multiplying the pseudo-inverse of A, given by i
 Finally we calculate the quantity ||x||_2 + ||y||_2 by using `norm` function.
 
 Correct answer is 8.1298e-01, in this case, `A`.
+
+#### Q6
+
+![](questions/eigenvalues/eigen-6.jpg "Eigenvalues Q6")
+
+The question asks us to perform certain calculations using the Hilbert matrix, the inverse power method, and the eig command in MATLAB.
+
+Inverse Power Method: The inverse power method is an iterative algorithm used to approximate eigenvalues of a matrix. It relies on the fact that the eigenvector corresponding to the smallest eigenvalue of the matrix A is approximately the limit of the sequence (A - pI)^(-k) * x, where p is an approximation to the desired eigenvalue, I is the identity matrix, k is the number of iterations, and x is the initial unit vector. By applying this iterative process, we can approximate the eigenvalue λ_p that is closest to the value p=0.2. Each iteration involves solving a linear system of equations.
+
+LU decomposition is used in the provided code to solve a system of linear equations efficiently. In the context of the inverse power method, LU decomposition helps in solving the linear systems that arise during each iteration of the method. By utilizing LU decomposition, the question is solved the linear systems (A - pI)x = y during each iteration of the inverse power method more efficiently than direct methods like Gaussian elimination. This helps in improving the overall performance and computational efficiency of the code.
+
+Computing the reference "exact" value: To validate the result obtained from the inverse power method, the eig command in MATLAB can be used. This command computes all eigenvalues of a given matrix A, and we can then select the eigenvalue that is closest to the desired value p=0.2.
+
+```
+clear all
+n=6;
+A=hilb(n);
+p=0.2;
+z=ones(n,1);
+w=z/norm(z);
+lambda(1)=p;
+[L,U,P]=lu(A-p*eye(n));
+for i=1:4
+    y=inv(L) * P*w; % also works y = L \ P*W
+    z=inv(U) * y;      % also works z = U \ y
+    lambda(i+1) = p+1 / (w'*z);
+    w = z / norm(z);
+end
+approximated_val = eigs(A,1,p);
+error = abs ( lambda(i+1)-approximated_val ) / abs( approximated_val )
+
+```
+
+First we define our order(n) and hilbert matrix. Then we use inverse power method, initializes `p` to the desired value (0.2), sets up the initial vector `z` as a vector of ones, and normalizes it to get `w`.
+
+It performs LU decomposition of A - p * eye(n) using the lu function, obtaining the lower triangular matrix L, upper triangular matrix U, and permutation matrix P.
+
+The inverse power method is applied iteratively for four iterations. In each iteration:
+
+The equation L * y = P * w is solved using forward substitution to obtain `y`.
+The equation U * z = y is solved using back substitution to obtain `z`.
+The updated eigenvalue estimate is stored in lambda by adding `p` to the reciprocal of the dot product of `w` and `z`.
+`w` is then updated by normalizing `z`.
+
+Then the code uses the eigs function to compute the eigenvalue closest to `p` for the matrix A, specifying that it should find the eigenvalue with the smallest magnitude (1).
+The resulting eigenvalue is assigned to approximated_val as the reference "exact" value.
+
+Finally, the absolute difference between the estimated eigenvalue (lambda(i + 1)) obtained from the inverse power method and the computed eigenvalue (approximated_val) is divided by the absolute value of approximated_val to calculate the relative error.
+
+Correct answer is 2.5567e-06, in this case, `B`.
 
 #### Q7
 
