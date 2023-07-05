@@ -289,6 +289,41 @@ In option E, it is said that the matrix B does not have three orthogonal eigenva
 
 Correct answer is `B`.
 
+#### Q3 
+
+![](questions/eigenvalues/eigen-3.jpg "Eigenvalues Q3")
+
+The question asks us to use the Power Method for 24 iterations on a Vandermonde matrix A generated from a vector x with 10 equally spaced elements between -1 and 1. We need to find the approximate value of the third component of the eigenvector associated with the largest eigenvalue in terms of magnitude.
+
+```
+clear all
+
+x=linspace(-1,1,10);
+
+A=vander(x);
+z=ones(10,1);
+w=z/norm(z);
+
+for i=1:24
+    z=A*w;
+    lambda(i+1)=w'*z;
+    w=z/norm(z);
+end
+w(3)
+```
+
+In the first part of the matlab code, it creates a vector `x` with 10 equally spaced points between -1 and 1 using the linspace function.
+
+Then, it generates a Vandermonde matrix A using the vector `x`. Each column of the matrix A is formed by raising the corresponding element of the vector `x` to a power.
+
+Then, `z` is initialized as a column vector of ones, and `w` is obtained by normalizing `z`. The purpose of this is to initialize `w` as a starting vector for an iterative process called the Power Method, used to find the dominant eigenvalue and eigenvector of a matrix.
+
+Then, we use for loop to run 24 iterations of the Power Method. In each iteration, it updates the vector `z` by multiplying matrix A with the vector `w`, then it calculates the Rayleigh quotient `lambda(i + 1)`, which represents an approximation to the dominant eigenvalue of matrix A, using the current vector `w` and the updated vector `z`. The vector `w` is then updated as the normalized version of `z`.
+
+Finally, the code outputs the third element of the vector `w`. Since the Power Method aims to find the dominant eigenvector of the matrix A, the third element of `w` represents an approximation to the corresponding component of the dominant eigenvector.
+
+Correct answer is 1.4778e-01, in this case, `C`.
+
 #### Q5
 
 ![](questions/eigenvalues/eigen-5.jpg "Eigenvalues Q5")
@@ -315,7 +350,7 @@ Then we used svd function which is computes the singular value decomposition of 
 
 The equation Ax = b is solved by multiplying the pseudo-inverse of A, given by inv(S) * (U' * b), with b. The resulting vector y represents the solution of the linear system with the coefficient matrix S. Then, the solution vector x is obtained by multiplying V with y.
 
-Finally we calculate the quantity ||x||_2 + ||y||_2 by using `norm` function.
+Finally we calculate the quantity x_2 + y_2 by using `norm` function.
 
 Correct answer is 8.1298e-01, in this case, `A`.
 
@@ -398,6 +433,54 @@ distance_2_norm = norm(A - A_rank_5, 2)
 ```
 
 Correct answer is 8.3730e-02, in this case, `C`
+
+#### Q8
+
+![](questions/eigenvalues/eigen-8.jpg "Eigenvalues Q8")
+
+First of all, let's analyze the question.  Let x be a vector made of 10 equally spaced elements in the interval [0,1] which means the vector x contains 10 values that are evenly spaced between 0 and 1.
+
+The command `A=vander(x)` generates a Vandermonde matrix using the vector x. A Vandermonde matrix is a special type of matrix where each column is formed by raising the corresponding element of the input vector to a power. In this case, each column of A will contain powers of the elements in vector x.
+
+Our goal is to construct a new matrix `An` that is as close as possible to matrix A, but with a rank of 7. The rank of a matrix represents the maximum number of linearly independent rows or columns it contains.
+
+The question mentions measuring the distance between matrices using the 2-norm measure. The 2-norm of a matrix is calculated by taking the square root of the sum of the squares of its elements. However, in this case, we need to clarify what is meant by "closest" and how it relates to the 2-norm measure.
+
+The question also asks for the infinity norm of matrix `An`. The infinity norm of a matrix is the maximum absolute row sum of the matrix. In other words, it measures the largest value obtained by summing the absolute values of the elements in each row of the matrix.
+
+```
+clear all
+
+x = linspace(0, 1, 10);
+A = vander(x);
+
+[U, S, V] = svd(A);
+
+An = U(:, 1:7) * S(1:7, 1:7) * V(:, 1:7)';
+
+norm(An, inf)
+
+```
+
+The code starts by generating a vector `x` using the linspace function. The linspace function creates a linearly spaced vector of 10 elements between 0 and 1.
+
+Then, it generates a Vandermonde matrix A using the generated vector `x` with the vander function. Each column of A is formed by raising the corresponding element of `x` to a power.
+
+Then, it applies the Singular Value Decomposition to matrix A using the svd function. SVD decomposes A into three matrices: U, S, and V.
+
+Then, it performs a low-rank approximation of the matrix A by selecting the dominant singular values and vectors. It achieves this through the following steps:
+
+1. U(:, 1:7) selects the columns 1 to 7 from the matrix U, corresponding to the dominant singular vectors.
+2. S(1:7, 1:7) selects the top-left 7x7 block from the matrix S, which includes the dominant singular values.
+3. V(:, 1:7) selects the columns 1 to 7 from the matrix V, corresponding to the dominant right singular vectors.
+
+Multiplying these three matrices together, U(:, 1:7) * S(1:7, 1:7) * V(:, 1:7)', produces the low-rank approximation matrix An.
+
+Finally, it calculates the infinity norm of the matrix `An` using the norm function with the argument `inf`. The `inf` argument specifies that the infinity norm should be computed. 
+
+In the given code, SVD is used to compute the dominant singular values and vectors of the Vandermonde matrix `A`. These dominant components are then used to construct a low-rank approximation matrix `An`. By using SVD, we can effectively analyze the structure of `A` and derive a reduced-rank approximation, which can be useful in various applications such as data compression, noise reduction, and dimensionality reduction.
+
+Correct answer is 1.0000e+01, in this case, `E`.
 
 #### Q9
 
