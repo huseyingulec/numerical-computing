@@ -1,11 +1,12 @@
 ## Numerical Computing Matlab Questions
 This repository includes matlab questions and their answers of Linear Algebra and Geometry course in Politecnico di Torino. 
 
+The story behind the project is that while we were studying for a MATLAB exam, we decided to take notes on the questions. At some point, we had the idea of sharing these notes online so that they could be useful as a study resource for all students preparing for the exam. We hope it helps.
+
 We solved questions from portale of Polito and we tried to simplify the questions as much as possible with our explanations. 
 
-The course subjects divided into 7 sub-subjects in portale. 
-
 ## Subjects
+The course subjects divided into 7 sub-subjects in portale. 
 
 ### [Syntax - Level 1 (W2)](#syntax---level-1-w2-1)
 
@@ -32,6 +33,8 @@ There are also 4 summarizing tests whose questions are more indicative of the ty
 ### [Quiz 3 (W14)](#quiz-3-w14-1)
 
 ### Checkout [this section](#how-to-contribute-this-repository) below, if you want to add questions to this repository.
+
+### For any problem or any recommendations, you can reach editors directly from [telegram group](https://t.me/numericalComputing) or  [email](mailto:itshuseyingulec@gmail.com).
 
 A note from Professor; 
 1. Questions should **not be considered exhaustive of the course program**. Moreover, some questions are proposed with a high level of heterogeneity in terms of complexity.
@@ -724,10 +727,15 @@ Correct answer is 1.2867e-09, in this case, `A`.
 
 ***Questions will be added for this subject.***
 
-### How to contribute this repository?
-1. Firstly, you can fork this repository into your github.  
+### How to add a question to this repository?
+
+If you could not find the question that you are looking for, you can send the question to the [telegram group](https://t.me/numericalComputing).
+
+Or, if you are comfortable with using Github, you can directly contribute to the project by following these steps:
+
+1. Firstly, you can fork this repository into your Github.  
 2. After making sure that the questions doesn't exist in this repository, you can add your question to the related subject with your explanation.
 3. For the question photo, it needs to be **screenshot**, not taken by a mobile phone camera from a pc/tablet.
-4. After adding, you can commit and send a pull request to this repository. 
-5. Our editors will check your request and prepare for adding to this repository.
+4. After adding question and explanation, you can commit and send a pull request to this repository. 
+5. Our editors will check your pull request and edit(if needs) for adding to this repository.
 5. Congratulations! You have provided an important support to those who will embark on this adventure. Your name is now on the contributor list!
