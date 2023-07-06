@@ -667,6 +667,46 @@ This assumption is based on the fact that for small to moderate values of n, the
 
 Correct answer is `A`.
 
+#### Q14
+
+![](questions/eigenvalues/eigen-14.png "Eigenvalues Q14")
+
+The question asks us to determine the spectral radius of a Hilbert matrix of order 6, denoted as A, using the power method. The power method involves iteratively multiplying a vector by A, normalizing it, and repeating this process several times. After 6 iterations, the resulting vector is used to estimate the dominant eigenvalue and the spectral radius. The question also asks us to compute the exact value of the spectral radius using the definition ρ(A)=max(i)abs(λ(i)), where λ(i) represents an eigenvalue of A. Finally, we are required to calculate the relative error associated with the approximation obtained from the power method.
+
+```
+clear all
+
+n=6;
+A=hilb(n);
+z=ones(n,1);
+w=z/norm(z);
+
+for i=1:6
+    z=A*w;
+    lambda(i)=w'*z;
+    w=z/norm(z);
+end
+
+approximated_val=eig(A);
+radius1=max(abs(approximated_val))
+radius2=max(abs(lambda));
+err=abs(radius1-radius2)/abs(radius1)
+```
+ 
+In the code, it sets the value of n to 6, which represents the order of the Hilbert matrix. Then, sets `A=hilb(n)` which generates the Hilbert matrix A of order n.
+
+Then, initializes the vector `z` as a column vector of ones with length n. This vector is used as the initial unit vector.
+
+Then, it normalizes the initial unit vector `z` by dividing it by its norm. This creates the initial vector `w`, which is used in the power method.
+
+Then, the loop `for i=1:6` performs 6 iterations of the power method. Inside the loop, `z=A*w` multiplies the matrix `A` with the vector `w`, resulting in a new vector `z`. `lambda(i)=w'*z` calculates the approximation of the dominant eigenvalue by taking the dot product of `w` and `z`. This value is stored in the array lambda for each iteration. `w=z/norm(z)` normalizes the new vector `z`, producing the updated vector `w` for the next iteration.
+
+After the loop, `approximated_val=eig(A)` computes all the eigenvalues of matrix `A` and stores them in the array `approximated_val`. `radius1=max(abs(approximated_val))` finds the maximum absolute value among the eigenvalues of `A`, giving the approximate value of the spectral radius. `radius2=max(abs(lambda))` finds the maximum absolute value among the values stored in the array lambda, which represents the eigenvalues estimated by the power method. 
+
+Finally, `err=abs(radius1-radius2)/abs(radius1)` calculates the relative error.
+
+Correct answer is 1.2867e-09, in this case, `A`.
+
 ## Quiz 0 (W5)
 
 
