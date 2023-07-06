@@ -56,7 +56,7 @@ A & B (A and B are evaluated)
 
 A && B (B is only evaluated if A is true)
 
-So the correct answer will be `E`
+Correct answer is `E`.
 
 #### Q2
 ![](questions/syntax-level1/syntaxlevel1-2.png "Q2")
@@ -65,69 +65,95 @@ So the correct answer will be `E`
 
 `~y = not(y)` returns a logical array of the same size as y. The array contains logical 1 (true) values where **y is zero** and logical 0 (false) values where **y is nonzero**. So in our question it gives us an array of full zero because given y has nonzero elements.
 
-`x&(~y)` returns a logical array of [0, 0, 0, 0, 0, 0] because we are taking their intersection. For this `&` operator to return a nonzero number, we need nonzero numbers both from x and y. Correct answer is `C`
+`x&(~y)` returns a logical array of [0, 0, 0, 0, 0, 0] because we are taking their intersection. For this `&` operator to return a nonzero number, we need nonzero numbers both from x and y. 
+
+Correct answer is `C`
 
 #### Q3
 ![](questions/syntax-level1/syntaxlevel1-3.png "Q3")
 
 A polyline is a list of points, where line segments are drawn between consecutive points.
 
-While plotting, we can use different styles to plot our graph. There are some shorcuts for colors such as `r` is for red, `g` is for green etc. Also there are some shortcuts for line styles such as `-` is for solid line, `--` is for dashed line, `:` is for dotted line etc. So the correct answer will be `A`.
+While plotting, we can use different styles to plot our graph. There are some shorcuts for colors such as `r` is for red, `g` is for green etc. Also there are some shortcuts for line styles such as `-` is for solid line, `--` is for dashed line, `:` is for dotted line etc. 
+
+Correct answer is `A`.
 
 #### Q4
 ![](questions/syntax-level1/syntaxlevel1-4.png "Q4")
 
-From Matlab documentation: `clc` clears all the text from the Command Window, resulting in a clear screen. Correct answer is `A`
+From Matlab documentation: `clc` clears all the text from the Command Window, resulting in a clear screen. 
+
+Correct answer is `A`
 
 #### Q5
 ![](questions/syntax-level1/syntaxlevel1-5.png "Q5")
 
-In this question, we were asked 10 **sub-intervals**. linspace function creates n points between x and y but it creates n-1 sub-intervals between x and y points. So for this question, we need to choose linspace(-1,1,11) to get a 10 subintervals. Correct answer is `C` 
+In this question, we were asked 10 **sub-intervals**. linspace function creates n points between x and y but it creates n-1 sub-intervals between x and y points. So for this question, we need to choose linspace(-1,1,11) to get a 10 subintervals. 
+
+Correct answer is `C` 
 
 #### Q6
 ![](questions/syntax-level1/syntaxlevel1-6.png "Q6")
 
-In this question, to divide the interval into `N` sub-intervals we need to use linspace(x,y,n+1) because linspace divides the intervals into n-1 sub-intervals but we need N amount of sub-intervals. We need to read carefully. Correct answer is `D`
+In this question, to divide the interval into `N` sub-intervals we need to use linspace(x,y,n+1) because linspace divides the intervals into n-1 sub-intervals but we need N amount of sub-intervals. We need to read carefully. 
+
+Correct answer is `D`
 
 #### Q7
 ![](questions/syntax-level1/syntaxlevel1-7.png "Q7")
 
-From Matlab documentation: `clear` removes all variables from the current workspace, releasing them from system memory. `clear` removes a global variable from the current workspace but not other workspaces. Correct answer is `B`
+From Matlab documentation: `clear` removes all variables from the current workspace, releasing them from system memory. `clear` removes a global variable from the current workspace but not other workspaces. 
+
+Correct answer is `B`
 
 #### Q8
 ![](questions/syntax-level1/syntaxlevel1-8.png "Q8")
 
-`A == B` returns a logical array with elements set to logical 1 (true) where arrays A and B are equal; otherwise, the element is logical 0 (false). In this question fourth elements and seventh elements of x and y is equal so the answer will be [0 0 0 1 0 0 1]. Correct answer is `C`
+`A == B` returns a logical array with elements set to logical 1 (true) where arrays A and B are equal; otherwise, the element is logical 0 (false). In this question fourth elements and seventh elements of x and y is equal so the answer will be [0 0 0 1 0 0 1]. 
+
+Correct answer is `C`
 
 #### Q9
 ![](questions/syntax-level1/syntaxlevel1-9.png "Q9")
 
-From Matlab documentation: A./B divides each element of A by the corresponding element of B. A and B must have compatible sizes. In the simplest cases, they can be the same size or one can be a scalar. Correct answer is `A`
+From Matlab documentation: A./B divides each element of A by the corresponding element of B. A and B must have compatible sizes. In the simplest cases, they can be the same size or one can be a scalar. 
+
+Correct answer is `A`
 
 #### Q10
 ![](questions/syntax-level1/syntaxlevel1-10.png "Q10")
 
-From Matlab documentation: contour(Z) creates a contour plot containing the isolines of matrix Z, where Z contains height values on the x-y plane. MATLAB® automatically selects the contour lines to display. The column and row indices of Z are the x and y coordinates in the plane, respectively. For more [checkout here](https://www.google.com/search?q=contour+level+curves+in+matlab&tbm=isch&ved=2ahUKEwiU8IjZjpT_AhXGyQIHHapECNMQ2-cCegQIABAA&oq=contour+level+curves+in+matlab&gs_lcp=CgNpbWcQAzoECCMQJ1CJDVjoF2DXG2gAcAB4AIABeYgBmAWSAQM4LjGYAQCgAQGqAQtnd3Mtd2l6LWltZ8ABAQ&sclient=img&ei=qT1xZNT3GMaTi-gPqomhmA0&bih=936&biw=882). Correct answer is `D`
+From Matlab documentation: contour(Z) creates a contour plot containing the isolines of matrix Z, where Z contains height values on the x-y plane. MATLAB® automatically selects the contour lines to display. The column and row indices of Z are the x and y coordinates in the plane, respectively. For more [checkout here](https://www.google.com/search?q=contour+level+curves+in+matlab&tbm=isch&ved=2ahUKEwiU8IjZjpT_AhXGyQIHHapECNMQ2-cCegQIABAA&oq=contour+level+curves+in+matlab&gs_lcp=CgNpbWcQAzoECCMQJ1CJDVjoF2DXG2gAcAB4AIABeYgBmAWSAQM4LjGYAQCgAQGqAQtnd3Mtd2l6LWltZ8ABAQ&sclient=img&ei=qT1xZNT3GMaTi-gPqomhmA0&bih=936&biw=882). 
+
+Correct answer is `D`
 
 #### Q11 
 ![](questions/syntax-level1/syntaxlevel1-11.png "Q11")
 
-`.^`  Array power. From Matlab documentation: "A.^B denotes element-by-element powers. A and B must have compatible sizes. In the simplest cases, they can be the same size or one can be a scalar." We can eliminate option B, C and E from this definition. For option D, it doesn't needs to be n x n, we can use `.^` operator with 2 x 3 and 1 x 3 matrices so we can eliminate D. Correct answer is `A`
+`.^`  Array power. From Matlab documentation: "A.^B denotes element-by-element powers. A and B must have compatible sizes. In the simplest cases, they can be the same size or one can be a scalar." We can eliminate option B, C and E from this definition. For option D, it doesn't needs to be n x n, we can use `.^` operator with 2 x 3 and 1 x 3 matrices so we can eliminate D. 
+
+Correct answer is `A`
 
 #### Q12 
 ![](questions/syntax-level1/syntaxlevel1-12.png "Q12")
 
-From matlab documentation: "`>`  Greater than operator. A > B does element by element comparisons between A and B and returns an array with elements set to logical 1 (TRUE) where the relation is true and elements set to logical 0 (FALSE) where it is not." Correct answer is `E`
+From matlab documentation: "`>`  Greater than operator. A > B does element by element comparisons between A and B and returns an array with elements set to logical 1 (TRUE) where the relation is true and elements set to logical 0 (FALSE) where it is not." 
+
+Correct answer is `E`
 
 #### Q13
 ![](questions/syntax-level1/syntaxlevel1-13.png "Q13")
 
-For this kind of questions, we need to be careful for small details. Question asked us to plot the function in an interval. We have x values in [1, 2] interval so we will use `plot` function because while using `fplot` function we define a function generally and let Matlab choose the x values and compute the y values. With this information, we can eliminate `fplot`, options B and E. In options A and C, there are typos in y function, it needs to be `y=x.^2+log(x)`. Be careful while using `.^`operator. Correct answer is `D` 
+For this kind of questions, we need to be careful for small details. Question asked us to plot the function in an interval. We have x values in [1, 2] interval so we will use `plot` function because while using `fplot` function we define a function generally and let Matlab choose the x values and compute the y values. With this information, we can eliminate `fplot`, options B and E. In options A and C, there are typos in y function, it needs to be `y=x.^2+log(x)`. Be careful while using `.^`operator. 
+
+Correct answer is `D` 
 
 #### Q14
 ![](questions/syntax-level1/syntaxlevel1-14.png "Q14")
 
-Unlike other code languages Python and Javascript, in Matlab indexing starts from 1. To get an index from given x vector, simply we can use `x(start index : number of steps : end index)`. Correct answer is `A`
+Unlike other code languages Python and Javascript, in Matlab indexing starts from 1. To get an index from given x vector, simply we can use `x(start index : number of steps : end index)`. 
+
+Correct answer is `A`
 
 #### Q15
 ![](questions/syntax-level1/syntaxlevel1-15.png "Q15")
@@ -168,7 +194,7 @@ In this case, the interpolating polynomial p(x) is expected to have a minimum de
 
 Since the degree of p(x) is lower than the minimum required degree of 6, we cannot use p(x) to accurately interpolate the function f(x) on the given points.
 
-Therefore, the correct answer is E) no, since the interpolating polynomial has a minimum degree equal to 6.
+Therefore, the correct answer is `E) no, since the interpolating polynomial has a minimum degree equal to 6`.
 
 #### Q2
 
@@ -209,6 +235,9 @@ p = polyfit(x,y,4);
 x1= pi/8;
 y1= polyval(p,x1)
 ```
+
+Correct answer is 0.3812, in this case, `D`.
+
 #### Q4
 #### Q5
 #### Q6
@@ -324,6 +353,35 @@ Finally, the code outputs the third element of the vector `w`. Since the Power M
 
 Correct answer is 1.4778e-01, in this case, `C`.
 
+#### Q4
+
+![](questions/eigenvalues/eigen-4.jpg "Eigenvalues Q4")
+
+The question asks us to use the QR method iteratively for 6 iterations on the Hilbert matrix of order 18. The objective is to approximate the eigenvalues of the matrix using this method. Then, we need to calculate the maximum absolute error between the approximated eigenvalues and the actual eigenvalues obtained from the `eig` command. The error is measured as the maximum absolute difference between corresponding eigenvalues.
+
+```
+clear all
+
+A=hilb(18);
+
+for i=1:6
+    [Q,R]=qr(A);
+    A=R*Q;
+end
+
+max(abs(diag(A)-eig(A)))
+```
+
+In the first line, it generates the Hilbert matrix of order 18 using the hilb function.
+
+Then, the for loop iterates 6 times and applies the QR factorization method to the matrix A. In each iteration:, the qr function decomposes matrix A into its QR factors, Q (orthogonal matrix) and R (upper triangular matrix). The updated matrix A is obtained by multiplying R and Q together.
+
+In the last line of code, `diag(A)` returns a column vector containing the diagonal elements of matrix A. These diagonal elements correspond to the approximated eigenvalues obtained from the QR method after the specified number of iterations.
+
+By subtracting `eig(A)` from `diag(A)`, the code calculates the differences between the approximated eigenvalues (`diag(A)`) and the actual eigenvalues (`eig(A)`). The `max(abs(...))` function then calculates the maximum absolute difference among these differences, providing an estimate of the maximum absolute error in the eigenvalue approximation.
+
+Correct answer is 7.1563e-08, in this case, `B`.
+
 #### Q5
 
 ![](questions/eigenvalues/eigen-5.jpg "Eigenvalues Q5")
@@ -341,7 +399,6 @@ y = inv(S) * (U' * b); % also works S \ (U' * b)
 x = V * y;
 
 norm(x, 2) + norm(y, 2)
-
 ```
 
 First we defined matrix A as a tridiagonal matrix of order 18, with diagonal elements equal to 6, upper diagonal elements equal to 3, and lower diagonal elements equal to -3. Vector b is constructed with equally spaced values in the range [0, 1].
@@ -383,7 +440,6 @@ for i=1:4
 end
 approximated_val = eigs(A,1,p);
 error = abs ( lambda(i+1)-approximated_val ) / abs( approximated_val )
-
 ```
 
 First we define our order(n) and hilbert matrix. Then we use inverse power method, initializes `p` to the desired value (0.2), sets up the initial vector `z` as a vector of ones, and normalizes it to get `w`.
@@ -459,7 +515,6 @@ A = vander(x);
 An = U(:, 1:7) * S(1:7, 1:7) * V(:, 1:7)';
 
 norm(An, inf)
-
 ```
 
 The code starts by generating a vector `x` using the linspace function. The linspace function creates a linearly spaced vector of 10 elements between 0 and 1.
@@ -503,7 +558,6 @@ for i=1:8
     A = R*Q;
 end
 A(3,3)
-
 ```
 First line creates a 12x12 Hilbert matrix and assigns it to the variable A. The hilb function generates the Hilbert matrix based on the specified order, in this case, 12.
 
