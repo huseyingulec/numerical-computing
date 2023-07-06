@@ -32,9 +32,11 @@ There are also 4 summarizing tests whose questions are more indicative of the ty
 
 ### [Quiz 3 (W14)](#quiz-3-w14-1)
 
-### Checkout [this section](#how-to-contribute-this-repository) below, if you want to add questions to this repository.
+### Checkout [this section](#how-to-add-a-question-to-this-repository) below, if you want to add questions to this repository.
 
 ### For any problem or any recommendations, you can reach editors directly from [telegram group](https://t.me/numericalComputing) or  [email](mailto:itshuseyingulec@gmail.com).
+[Contact Me](mailto:youremail@example.com){:target="_blank"}
+
 
 A note from Professor; 
 1. Questions should **not be considered exhaustive of the course program**. Moreover, some questions are proposed with a high level of heterogeneity in terms of complexity.
