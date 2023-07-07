@@ -180,6 +180,42 @@ Correct answer is `D`
 
 ***Questions will be added for this subject.***
 
+#### Q1
+
+![](questions/syntax-level2/syntax2-1.jpg "Syntax2 Q1")
+
+#### Q2
+
+![](questions/syntax-level2/syntax2-2.jpg "Syntax2 Q2")
+
+#### Q3
+
+![](questions/syntax-level2/syntax2-3.jpg "Syntax2 Q3")
+
+#### Q4
+
+![](questions/syntax-level2/syntax2-4.jpg "Syntax2 Q4")
+
+#### Q5
+
+![](questions/syntax-level2/syntax2-5.jpg "Syntax2 Q5")
+
+#### Q6
+
+![](questions/syntax-level2/syntax2-6.jpg "Syntax2 Q6")
+
+#### Q7
+
+![](questions/syntax-level2/syntax2-7.jpg "Syntax2 Q7")
+
+#### Q8
+
+![](questions/syntax-level2/syntax2-8.jpg "Syntax2 Q8")
+
+#### Q9
+
+![](questions/syntax-level2/syntax2-9.jpg "Syntax2 Q9")
+
 ## Machine Arithmetic (W2)
 
 ***Questions will be added for this subject.***
