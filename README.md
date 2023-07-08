@@ -242,8 +242,62 @@ y1= polyval(p,x1)
 Correct answer is 0.3812, in this case, `D`.
 
 #### Q4
+
+![](questions/interpolation/interpolation-4.jpg "Interpolation Q4")
+
 #### Q5
+
+![](questions/interpolation/interpolation-5.jpg "Interpolation Q5")
+
 #### Q6
+
+![](questions/interpolation/interpolation-6.jpg "Interpolation Q6")
+
+#### Q7
+
+![](questions/interpolation/interpolation-7.jpg "Interpolation Q7")
+
+#### Q8
+
+![](questions/interpolation/interpolation-8.jpg "Interpolation Q8")
+
+#### Q9
+
+![](questions/interpolation/interpolation-9.jpg "Interpolation Q9")
+
+ #### Q10
+
+![](questions/interpolation/interpolation-10.jpg "Interpolation Q10")
+
+#### Q11
+
+![](questions/interpolation/interpolation-11.jpg "Interpolation Q11")
+
+#### Q12 
+
+![](questions/interpolation/interpolation-12.jpg "Interpolation Q12")
+
+#### Q13
+
+![](questions/interpolation/interpolation-13.jpg "Interpolation Q13")
+
+#### Q14
+
+![](questions/interpolation/interpolation-14.jpg "Interpolation Q14")
+
+#### Q15
+
+![](questions/interpolation/interpolation-15.jpg "Interpolation Q15")
+
+#### Q16
+
+![](questions/interpolation/interpolation-16.jpg "Interpolation Q16")
+
+
+
+
+
+
 
 
 ## Linear Systems - 1 (W9)
