@@ -1,5 +1,5 @@
-## Numerical Computing Matlab Questions
-This repository includes matlab questions and their answers of Linear Algebra and Geometry course in Politecnico di Torino. 
+## Numerical Computing MATLAB Questions
+This repository includes MATLAB questions and their answers of Linear Algebra and Geometry course in Politecnico di Torino. 
 
 The story behind the project is that while we were studying for a MATLAB exam, we decided to take notes on the questions. At some point, we had the idea of sharing these notes online so that they could be useful as a study resource for all students preparing for the exam. We hope it helps.
 
@@ -49,7 +49,7 @@ A note from Professor;
 #### Q1
 ![](questions/syntax-level1/syntax-level1-1.png "Q1")
 
-It asks us to write these equations in matlab. First, we can eliminate the wrong ones, in matlab after an `if` statement we use `elseif` statement to add another condition so we can eliminate option A, B and C. We have D and E options left. There is only one different in these options, `&&` and `&`. Both are logical `AND` operations. The `&&` though, is a "short-circuit" operator. 
+It asks us to write these equations in MATLAB. First, we can eliminate the wrong ones, in MATLAB after an `if` statement we use `elseif` statement to add another condition so we can eliminate option A, B and C. We have D and E options left. There is only one different in these options, `&&` and `&`. Both are logical `AND` operations. The `&&` though, is a "short-circuit" operator. 
 
 From the MATLAB documentation: "They are short-circuit operators in that they evaluate their second operand only when the result is not fully determined by the first operand."
 
@@ -84,7 +84,7 @@ Correct answer is `A`.
 #### Q4
 ![](questions/syntax-level1/syntaxlevel1-4.png "Q4")
 
-From Matlab documentation: `clc` clears all the text from the Command Window, resulting in a clear screen. 
+From MATLAB documentation: `clc` clears all the text from the Command Window, resulting in a clear screen. 
 
 Correct answer is `A`
 
@@ -105,7 +105,7 @@ Correct answer is `D`
 #### Q7
 ![](questions/syntax-level1/syntaxlevel1-7.png "Q7")
 
-From Matlab documentation: `clear` removes all variables from the current workspace, releasing them from system memory. `clear` removes a global variable from the current workspace but not other workspaces. 
+From MATLAB documentation: `clear` removes all variables from the current workspace, releasing them from system memory. `clear` removes a global variable from the current workspace but not other workspaces. 
 
 Correct answer is `B`
 
@@ -119,49 +119,49 @@ Correct answer is `C`
 #### Q9
 ![](questions/syntax-level1/syntaxlevel1-9.png "Q9")
 
-From Matlab documentation: A./B divides each element of A by the corresponding element of B. A and B must have compatible sizes. In the simplest cases, they can be the same size or one can be a scalar. 
+From MATLAB documentation: A./B divides each element of A by the corresponding element of B. A and B must have compatible sizes. In the simplest cases, they can be the same size or one can be a scalar. 
 
 Correct answer is `A`
 
 #### Q10
 ![](questions/syntax-level1/syntaxlevel1-10.png "Q10")
 
-From Matlab documentation: contour(Z) creates a contour plot containing the isolines of matrix Z, where Z contains height values on the x-y plane. MATLAB® automatically selects the contour lines to display. The column and row indices of Z are the x and y coordinates in the plane, respectively. For more [checkout here](https://www.google.com/search?q=contour+level+curves+in+matlab&tbm=isch&ved=2ahUKEwiU8IjZjpT_AhXGyQIHHapECNMQ2-cCegQIABAA&oq=contour+level+curves+in+matlab&gs_lcp=CgNpbWcQAzoECCMQJ1CJDVjoF2DXG2gAcAB4AIABeYgBmAWSAQM4LjGYAQCgAQGqAQtnd3Mtd2l6LWltZ8ABAQ&sclient=img&ei=qT1xZNT3GMaTi-gPqomhmA0&bih=936&biw=882). 
+From MATLAB documentation: contour(Z) creates a contour plot containing the isolines of matrix Z, where Z contains height values on the x-y plane. MATLAB® automatically selects the contour lines to display. The column and row indices of Z are the x and y coordinates in the plane, respectively. For more [checkout here](https://www.google.com/search?q=contour+level+curves+in+MATLAB&tbm=isch&ved=2ahUKEwiU8IjZjpT_AhXGyQIHHapECNMQ2-cCegQIABAA&oq=contour+level+curves+in+MATLAB&gs_lcp=CgNpbWcQAzoECCMQJ1CJDVjoF2DXG2gAcAB4AIABeYgBmAWSAQM4LjGYAQCgAQGqAQtnd3Mtd2l6LWltZ8ABAQ&sclient=img&ei=qT1xZNT3GMaTi-gPqomhmA0&bih=936&biw=882). 
 
 Correct answer is `D`
 
 #### Q11 
 ![](questions/syntax-level1/syntaxlevel1-11.png "Q11")
 
-`.^`  Array power. From Matlab documentation: "A.^B denotes element-by-element powers. A and B must have compatible sizes. In the simplest cases, they can be the same size or one can be a scalar." We can eliminate option B, C and E from this definition. For option D, it doesn't needs to be n x n, we can use `.^` operator with 2 x 3 and 1 x 3 matrices so we can eliminate D. 
+`.^`  Array power. From MATLAB documentation: "A.^B denotes element-by-element powers. A and B must have compatible sizes. In the simplest cases, they can be the same size or one can be a scalar." We can eliminate option B, C and E from this definition. For option D, it doesn't needs to be n x n, we can use `.^` operator with 2 x 3 and 1 x 3 matrices so we can eliminate D. 
 
 Correct answer is `A`
 
 #### Q12 
 ![](questions/syntax-level1/syntaxlevel1-12.png "Q12")
 
-From matlab documentation: "`>`  Greater than operator. A > B does element by element comparisons between A and B and returns an array with elements set to logical 1 (TRUE) where the relation is true and elements set to logical 0 (FALSE) where it is not." 
+From MATLAB documentation: "`>`  Greater than operator. A > B does element by element comparisons between A and B and returns an array with elements set to logical 1 (TRUE) where the relation is true and elements set to logical 0 (FALSE) where it is not." 
 
 Correct answer is `E`
 
 #### Q13
 ![](questions/syntax-level1/syntaxlevel1-13.png "Q13")
 
-For this kind of questions, we need to be careful for small details. Question asked us to plot the function in an interval. We have x values in [1, 2] interval so we will use `plot` function because while using `fplot` function we define a function generally and let Matlab choose the x values and compute the y values. With this information, we can eliminate `fplot`, options B and E. In options A and C, there are typos in y function, it needs to be `y=x.^2+log(x)`. Be careful while using `.^`operator. 
+For this kind of questions, we need to be careful for small details. Question asked us to plot the function in an interval. We have x values in [1, 2] interval so we will use `plot` function because while using `fplot` function we define a function generally and let MATLAB choose the x values and compute the y values. With this information, we can eliminate `fplot`, options B and E. In options A and C, there are typos in y function, it needs to be `y=x.^2+log(x)`. Be careful while using `.^`operator. 
 
 Correct answer is `D` 
 
 #### Q14
 ![](questions/syntax-level1/syntaxlevel1-14.png "Q14")
 
-Unlike other code languages Python and Javascript, in Matlab indexing starts from 1. To get an index from given x vector, simply we can use `x(start index : number of steps : end index)`. 
+Unlike other code languages Python and Javascript, in MATLAB indexing starts from 1. To get an index from given x vector, simply we can use `x(start index : number of steps : end index)`. 
 
 Correct answer is `A`
 
 #### Q15
 ![](questions/syntax-level1/syntaxlevel1-15.png "Q15")
 
-From Matlab documentation: 
+From MATLAB documentation: 
 ```
 while expression
     statements
@@ -179,6 +179,124 @@ Correct answer is `D`
 ## Syntax - Level 2 (W2)
 
 ***Questions will be added for this subject.***
+
+#### Q1
+
+![](questions/syntax-level2/syntax2-1.png "Syntax2 Q1")
+
+The command `A = fix(rand(2, 8) * 12)` generates a matrix A ∈ ℝ^(2×8) of random integers between 0 and 12 in MATLAB.
+
+`rand(2, 8)` generates a matrix of random numbers between 0 and 1 with dimensions 2×8, similar to the previous explanation.
+
+`* 12` scales the random numbers by multiplying them by 12, similar to the previous explanation.
+
+`fix()` is a MATLAB function that rounds each element of the matrix towards zero to obtain the nearest integer. In this case, it ensures that the elements of the matrix are integers rather than floating-point numbers.
+
+Correct answer is `A`.
+#### Q2
+
+![](questions/syntax-level2/syntax2-2.png "Syntax2 Q2")
+
+From MATLAB documentation: "Use the vector of logical values as an index to view the values in A that are greater than 10."
+```
+A(A>10)
+```
+
+Correct answer is `E`.
+#### Q3
+
+![](questions/syntax-level2/syntax2-3.png "Syntax2 Q3")
+
+The command that allows us to compute the spectral radius of a matrix A in MATLAB is `max(abs(eig(A)))`.
+
+Correct answer is `A`.
+
+#### Q4
+
+![](questions/syntax-level2/syntax2-4.png "Syntax2 Q4")
+
+`-2*eye(5)` creates a 5x5 matrix with -2 on the diagonal and zeros elsewhere. The `eye(5)` function generates a 5x5 identity matrix, and multiplying it by -2 gives a matrix with -2 on the diagonal.
+
+`diag(ones(1,4),1)` creates a 5x5 matrix with ones on the first upper diagonal (above the main diagonal) and zeros elsewhere. The `ones(1,4)` function generates a row vector of four ones, and `diag(..., 1)` places these ones on the first upper diagonal.
+
+`diag(ones(1,4),-1)` creates a 5x5 matrix with ones on the first lower diagonal (below the main diagonal) and zeros elsewhere. The `diag(..., -1)` places the ones on the first lower diagonal.
+
+Correct answer is `D`.
+
+#### Q5
+
+![](questions/syntax-level2/syntax2-5.jpg "Syntax2 Q5")
+
+To obtain an appropriate plot of the function f(x)=sin(1/x) with the range 0.01 < x < 1 in MATLAB, we can use the `semilogx` function.
+
+The `semilogx` function is specifically designed for plotting data on a logarithmic scale along the x-axis. In this case, since the range includes values close to zero, a logarithmic scale for the x-axis can be helpful to visualize the function properly.
+
+In other words, in this question our x values are close to 0 and in a logaritmic scale(small number or big number) so we use `semilogx`.
+
+Correct answer is `A`.
+
+#### Q6
+
+![](questions/syntax-level2/syntax2-6.jpg "Syntax2 Q6")
+
+The question asks us to plot two functions, on the interval [0,2] in a single figure using MATLAB. To do this, we need to define a range of x-values within the interval [0,2]. Then, calculate the corresponding y-values for each function using element-wise operations. Next, create a new figure and plot the first and second function, using the same plot function. 
+
+Correct answer is `C`.
+
+#### Q7
+
+![](questions/syntax-level2/syntax2-7.jpg "Syntax2 Q7")
+
+To correctly represent the function y=e^x^2 for the range 0 < x < 4 in MATLAB the appropriate command is `semilogy`.
+
+The `semilogy` function is used to plot data on a logarithmic scale along the y-axis. Since the function can have a wide range of values, a logarithmic scale on the y-axis can help visualize it properly.
+
+Correct answer is `A`.
+
+#### Q8
+
+![](questions/syntax-level2/syntax2-8.jpg "Syntax2 Q8")
+
+```
+clear all
+
+for k = 1:100
+    x(k) = log(k)+sqrt(k);
+    y(k) = k/(6*pi);
+end
+format short e
+dot(x,y)
+```
+
+Correct answer is 3.2498e+03, in this case, `C`.
+
+#### Q9
+
+![](questions/syntax-level2/syntax2-9.jpg "Syntax2 Q9")
+
+```
+clear all
+
+A = linspace(28, 52, 1000);
+A(2:2:end) = A(2:2:end) * 2;
+A(1:2:end) = A(1:2:end) * 5;
+
+format long e
+A(456)
+```
+
+`linspace(28, 52, 1000)` generates a vector A of 1000 linearly spaced elements between 28 and 52.
+
+`A(2:2:end)` selects the even-indexed components of the vector A.
+
+`A(2:2:end) = A(2:2:end) * 2` multiplies the even-indexed components by 2.
+
+`A(1:2:end)` selects the odd-indexed components of the vector A.
+
+`A(1:2:end) = A(1:2:end) * 5` multiplies the odd-indexed components by 5.
+
+Correct answer is 7.786186186186185e+01, in this case, `D`.
+
 
 ## Machine Arithmetic (W2)
 
@@ -292,7 +410,7 @@ Correct answer is 23.9216, in this case, `E`.
 
 The question asks us to analyze the properties of a given matrix B.
 
-First of, we can find the matrix B by using basic matlab code. 
+First of, we can find the matrix B by using basic MATLAB code. 
 
 ```
 clear all
@@ -313,7 +431,7 @@ In option A, it is said that matrix B is not symmetric which means matrix B does
 
 In linear algebra, a square matrix B is said to be diagonalizable if it can be written in the form B = PDP', where P is an orthogonal matrix and D is a diagonal matrix. In option B, it is said that the matrix B is diagonalizable by orthogonal matrices which means that we can find an orthogonal matrix P and a diagonal matrix D such that B = PDP'. In the context of the given matrix B, we know that B is symmetric. For symmetric matrices, it is always possible to diagonalize them using orthogonal matrices. This property is known as the Spectral Theorem for Symmetric Matrices so option B is True.
 
-In option C, it is said that the matrix norm of B, is approximately 10. We can find this by using matlab code after creating matrix B, ```norm(B, 2)``` so in this case it is 97,2442, approximately 100. Therefore, the option C is false.
+In option C, it is said that the matrix norm of B, is approximately 10. We can find this by using MATLAB code after creating matrix B, ```norm(B, 2)``` so in this case it is 97,2442, approximately 100. Therefore, the option C is false.
 
 In option D, it is said that the matrix B does not have three real positive eigenvalues. However, based on the given matrix B, we can find that all its eigenvalues(by using ```eig(B)``` code) (approximately  0.0037, 2.7521, 97.2442) are real and positive. Therefore, the option D is false.
 
@@ -344,7 +462,7 @@ end
 w(3)
 ```
 
-In the first part of the matlab code, it creates a vector `x` with 10 equally spaced points between -1 and 1 using the linspace function.
+In the first part of the MATLAB code, it creates a vector `x` with 10 equally spaced points between -1 and 1 using the linspace function.
 
 Then, it generates a Vandermonde matrix A using the vector `x`. Each column of the matrix A is formed by raising the corresponding element of the vector `x` to a power.
 
@@ -546,7 +664,7 @@ Correct answer is 1.0000e+01, in this case, `E`.
 
 The question is asking us to perform 8 iterations of the QR method on the Hilbert matrix of order 12, starting with matrix A₀ = A. The Hilbert matrix is a specific type of matrix where its entries are given by the formula A(i, j) = 1 / (i + j - 1).
 
-The QR method is an iterative numerical algorithm used to find the eigenvalues (and eigenvectors) of a matrix. In each iteration, the matrix A is decomposed into a product of an orthogonal matrix Q and an upper triangular matrix R. The resulting matrix R is then multiplied by Q to obtain the updated matrix A for the next iteration which is A = R*Q in matlab.
+The QR method is an iterative numerical algorithm used to find the eigenvalues (and eigenvectors) of a matrix. In each iteration, the matrix A is decomposed into a product of an orthogonal matrix Q and an upper triangular matrix R. The resulting matrix R is then multiplied by Q to obtain the updated matrix A for the next iteration which is A = R*Q in MATLAB.
 
 The question specifically asks for the approximate value of element A₈(3,3) after 8 iterations of the QR method. This means we need to perform the QR iterations as described above and retrieve the value at the third row and third column of the resulting matrix A after 8 iterations.
 
@@ -635,7 +753,7 @@ format short e
 norm(w,1)
 ```
 
-In the matlab code, first we have defined our order(n) and an empty matrix A with zeros(100). Then we defined the matrix A with given formula inside of a for loop.
+In the MATLAB code, first we have defined our order(n) and an empty matrix A with zeros(100). Then we defined the matrix A with given formula inside of a for loop.
 
 Then we set `p` to 100, which indicates the desired number of eigenvalues and eigenvectors to be computed.
 
