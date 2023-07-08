@@ -248,7 +248,37 @@ Correct answer is 0.3812, in this case, `D`.
 
 ## Linear Systems - 1 (W9)
 
-***Questions will be added for this subject.*** 
+#### Q1
+
+![](questions/linearsystems1/linear1-1.jpg "Linear1 Q1")
+
+#### Q2
+
+![](questions/linearsystems1/linear1-2.jpg "Linear1 Q2")
+
+#### Q3
+
+![](questions/linearsystems1/linear1-3.jpg "Linear1 Q3")
+
+#### Q4
+
+![](questions/linearsystems1/linear1-4.jpg "Linear1 Q4")
+
+#### Q5
+
+![](questions/linearsystems1/linear1-5.jpg "Linear1 Q5")
+
+#### Q6
+
+![](questions/linearsystems1/linear1-6.jpg "Linear1 Q6")
+
+#### Q7
+
+![](questions/linearsystems1/linear1-7.jpg "Linear1 Q7")
+
+#### Q8
+
+![](questions/linearsystems1/linear1-8.jpg "Linear1 Q8")
 
 ## Linear Systems - 2 (W9)
 
