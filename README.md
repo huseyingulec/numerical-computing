@@ -252,7 +252,37 @@ Correct answer is 0.3812, in this case, `D`.
 
 ## Linear Systems - 2 (W9)
 
-***Questions will be added for this subject.***
+#### Q1
+
+![](questions/linearsystems2/linear2-1.jpg "Linear2 Q1")
+
+#### Q2
+
+![](questions/linearsystems2/linear2-2.jpg "Linear2 Q2")
+
+#### Q3
+
+![](questions/linearsystems2/linear2-3.jpg "Linear2 Q3")
+
+#### Q4
+
+![](questions/linearsystems2/linear2-4.jpg "Linear2 Q4")
+
+#### Q5
+
+![](questions/linearsystems2/linear2-5.jpg "Linear2 Q5")
+
+#### Q6
+
+![](questions/linearsystems2/linear2-6.jpg "Linear2 Q6")
+
+#### Q7
+
+![](questions/linearsystems2/linear2-7.jpg "Linear2 Q7")
+
+#### Q8
+
+![](questions/linearsystems2/linear2-8.jpg "Linear2 Q8")
 
 ## Eigenvalues and Matrix Factorizations (W14)
 
