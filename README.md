@@ -182,7 +182,29 @@ Correct answer is `D`
 
 ## Machine Arithmetic (W2)
 
-***Questions will be added for this subject.***
+#### Q1
+
+![](questions/machine-arithmetic/machine-1.jpg "Machine Q1")
+
+#### Q2
+
+![](questions/machine-arithmetic/machine-2.jpg "Machine Q2")
+
+#### Q3
+
+![](questions/machine-arithmetic/machine-3.jpg "Machine Q3")
+
+#### Q4
+
+![](questions/machine-arithmetic/machine-4.jpg "Machine Q4")
+
+#### Q5
+
+![](questions/machine-arithmetic/machine-5.jpg "Machine Q5")
+
+#### Q6
+
+![](questions/machine-arithmetic/machine-6.jpg "Machine Q6")
 
 ## Interpolation (W5)
 #### Q1
