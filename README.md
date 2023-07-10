@@ -279,26 +279,11 @@ Correct answer is 0.3812, in this case, `D`.
 
 #### Q13
 
-![](questions/interpolation/interpolation-13.jpg "Interpolation Q13")
+![](questions/interpolation/interpolation-15.jpg "Interpolation Q13")
 
 #### Q14
 
-![](questions/interpolation/interpolation-14.jpg "Interpolation Q14")
-
-#### Q15
-
-![](questions/interpolation/interpolation-15.jpg "Interpolation Q15")
-
-#### Q16
-
-![](questions/interpolation/interpolation-16.jpg "Interpolation Q16")
-
-
-
-
-
-
-
+![](questions/interpolation/interpolation-16.jpg "Interpolation Q14")
 
 ## Linear Systems - 1 (W9)
 
