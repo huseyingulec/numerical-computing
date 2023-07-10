@@ -726,7 +726,7 @@ Correct answer is `D`.
 
 The question asks us to perform calculations on a given matrix A and find the 1-norm of a specific eigenvector.
 
-The matrix A is of order 100, meaning it is a square matrix with dimensions 100x100. The elements of A are defined using the formula a_{ij}=(1+i+j)/(1+|i-j|), where i and j are the row and column indices, respectively.
+The matrix A is of order 100, meaning it is a square matrix with dimensions 100x100. The elements of A are defined using the formula a_{ij}=(1+i+j)/(1+abs(i-j)), where i and j are the row and column indices, respectively.
 
 Our task is to find the eigenvalue of A that is closest to p=100. An eigenvalue of a matrix is a scalar value that, when multiplied by its corresponding eigenvector, gives back the same vector. In this case, we need to find the eigenvalue that is closest to p=100.
 
