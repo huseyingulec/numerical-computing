@@ -194,6 +194,11 @@ Correct answer is `D`
 
 ![](questions/machine-arithmetic/machine-3.jpg "Machine Q3")
 
+The question asks us to compute the quantities y using two different formulas for two sets of data. One formula involves directly subtracting square roots, while the other avoids numerical cancellation. We need to evaluate the relative errors between the results obtained from the two formulas for each set of data.
+```
+
+```
+
 #### Q4
 
 ![](questions/machine-arithmetic/machine-4.jpg "Machine Q4")
