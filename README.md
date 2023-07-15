@@ -471,28 +471,84 @@ Correct answer is 0.3812, in this case, `D`.
 
 #### Q4
 
-![](questions/interpolation/interpolation-4.jpg "Interpolation Q4")
+![](questions/interpolation/interpolation-4.png "Interpolation Q4")
+
+Basically, if there n points, it should be n-1 degree. In this question, it is given n+1 points.
+
+Correct answer `n`, in this case, `D`.
 
 #### Q5
 
-![](questions/interpolation/interpolation-5.jpg "Interpolation Q5")
+![](questions/interpolation/interpolation-5.png "Interpolation Q5")
+
+In interpolation, we use n-1 degree from given n points. In cubic spline, ax^3+bx^2+cx+d, there are 4 coefficients so for n-1 degree, we will have 4*(n-1) conditions.
+
+Correct answer is `B`.
 
 #### Q6
 
-![](questions/interpolation/interpolation-6.jpg "Interpolation Q6")
+![](questions/interpolation/interpolation-6.png "Interpolation Q6")
+
+Lagrange fundamental polynomial is [1, 0, 0] specifically asked to use. 
+
+In the matlab, there is no `lagr` function so we can eliminate these options. 
+
+In the question, it is asked to built to the first three nodes so we need use n-1 degree which is 2. 
+
+Correct answer is `D`.
 
 #### Q7
 
 ![](questions/interpolation/interpolation-7.jpg "Interpolation Q7")
 
+It is asked to find coefficient of the second order term. Polyfit function gives us coefficients of the polynomial. 
+
+```
+clear all
+x = [1, 2, 3, 4];
+y = [1, -1, 1, -1];
+c=polyfit(x,y,3); 
+c(2)
+```
+
+We define first x and y values, then we use polyfit and use 3 because we have 4 points so we need to use n-1 degree. Polyfit function gives us coefficients so c(2) will give us the coeefficient of second order-term.
+
+Correct answer is 10, in this case, `D`.
+
 #### Q8
 
 ![](questions/interpolation/interpolation-8.jpg "Interpolation Q8")
+
+In this question, it is asked to interpolate the given data in with spline function. Basically we need to define x, y and z values then use the spline function.
+
+```
+clear all
+x = [-1, 1, 7, 9, 19];
+y = [4, 3, 10, 10, 9];
+z = log(0.9);
+spline(x,y,z)
+```
+
+Correct answer is 3.0762e+00, in this case, `A`.
 
 #### Q9
 
 ![](questions/interpolation/interpolation-9.jpg "Interpolation Q9")
 
+In this question, it is asked to interpolate the given data in with spline function. Basically we need to define x, y and z values then use the spline function.
+
+```
+clear all
+x = [-5, 4, 5, 11];
+y = [6, 2, 4, 10]
+z = sqrt(1.8);
+y0 = 10;
+yn = 4;
+
+spline(x, [y0, y, yn], z)
+```
+
+Correct answer is 6.7247e+00, in this case, `D`.
  #### Q10
 
 ![](questions/interpolation/interpolation-10.jpg "Interpolation Q10")
@@ -501,9 +557,34 @@ Correct answer is 0.3812, in this case, `D`.
 
 ![](questions/interpolation/interpolation-11.jpg "Interpolation Q11")
 
+In this question, it is asked to interpolate the given data in with spline function. Basically we need to define x and z values, y function then use the spline function.
+
+```
+clear all
+x = [0, 0.5, 1, 1.5, 2];
+y = (sin(x)-(x+1).^2)./((x.^2)+3);
+z = 1.97;
+spline(x,y,z)
+```
+
+Correct answer is -1.148, in this case `D`.
+
 #### Q12 
 
 ![](questions/interpolation/interpolation-12.jpg "Interpolation Q12")
+
+In this question, it is asked to interpolate the given data. Basically we need to define x and y values then use first polyfit then polyval in the given point.
+
+```
+clear all
+x = [3, 6, 7, 14, 21];
+y = [8, 4, 5, 5, 7];
+z = exp(0.7);
+c = polyfit(x,y,4); % 5 points, should be 4 degre
+polyval(c,z)
+```
+
+Correct answer is 1.383776857236245e+01, in this case, `B`.
 
 #### Q13
 
@@ -512,6 +593,19 @@ Correct answer is 0.3812, in this case, `D`.
 #### Q14
 
 ![](questions/interpolation/interpolation-16.jpg "Interpolation Q14")
+
+In this question, it is asked to interpolate the given data. Basically we need to define x and y values then use first polyfit then polyval in the given point.
+
+```
+clear all
+x = linspace(0, 2*pi, 4);
+f = @(x) cos(x);
+y = f(x);
+c = polyfit(x,y,3); % 4 points, should be 3 degree
+p = polyval(c,pi/8)
+```
+
+Correct answer is 6.0449e-01, in this case, `A`.
 
 ## Linear Systems - 1 (W9)
 
