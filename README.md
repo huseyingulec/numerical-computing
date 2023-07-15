@@ -164,11 +164,7 @@ end
 ```
 Correct answer is `D`
 
-
-
 ## Syntax - Level 2 (W2)
-
-***Questions will be added for this subject.***
 
 #### Q1
 
