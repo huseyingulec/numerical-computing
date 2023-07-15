@@ -429,7 +429,9 @@ Therefore, the correct answer is `E) no, since the interpolating polynomial has 
 
 ![](questions/interpolation/interpolation-2.png "Interpolation Q2")
 
-An explanation will be added for this question.
+In MATLAB, the spline function does not directly provide an option to specify the order of the spline. By default, the spline function constructs a piecewise cubic spline, which is a third-order spline.
+
+Correct answer is `none of the alternatives`, in this case, `D`.
 
 #### Q3
 
