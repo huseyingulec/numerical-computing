@@ -22,16 +22,6 @@ The course subjects divided into 7 sub-subjects in portale.
 
 ### [Eigenvalues and matrix factorizations (W14)](#eigenvalues-and-matrix-factorizations-w14-1)
 
-There are also 4 summarizing tests whose questions are more indicative of the types that will be used during the final test in the lab. Several topics are addressed in each quiz.
-
-### [Quiz 0 (W5)](#quiz-0-w5-1)
-
-### [Quiz 1 (W9)](#quiz-1-w9-1)
-
-### [Quiz 2 (W10)](#quiz-2-w10-1)
-
-### [Quiz 3 (W14)](#quiz-3-w14-1)
-
 ### Checkout [this section](#how-to-add-a-question-to-this-repository) below, if you want to add questions to this repository.
 
 ### For any problem or any recommendations, you can reach editors directly from [telegram group](https://t.me/numericalComputing) or  [email](mailto:itshuseyingulec@gmail.com).
@@ -827,23 +817,6 @@ After the loop, `approximated_val=eig(A)` computes all the eigenvalues of matrix
 Finally, `err=abs(radius1-radius2)/abs(radius1)` calculates the relative error.
 
 Correct answer is 1.2867e-09, in this case, `A`.
-
-## Quiz 0 (W5)
-
-
-***Questions will be added for this subject.***
-
-## Quiz 1 (W9)
-
-***Questions will be added for this subject.***
-
-## Quiz 2 (W10)
-
-***Questions will be added for this subject.***
-
-## Quiz 3 (W14)
-
-***Questions will be added for this subject.***
 
 ### How to add a question to this repository?
 
