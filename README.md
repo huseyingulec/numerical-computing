@@ -302,7 +302,7 @@ Correct answer is 8.8901e-05, in this case, `D`.
 
 ![](questions/machine-arithmetic/machine-7.png "Machine Q7")
 
-This question asks us to represent the number `a` with base N=10,  t=8 digit after `0,` and rounding even tecnique which means at the end we need to round the closest number. 
+This question asks us to represent the number `a` with base N=10,  t=8 digit after `0,` and rounding even tecnique which means at the end we need to round the closest even number. 
 
 Correct answer is 0.10034712 . 10^3, in this case `E`.
 
