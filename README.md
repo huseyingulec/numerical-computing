@@ -1,5 +1,5 @@
-## Numerical Computing Matlab Questions
-This repository includes matlab questions and their answers of Linear Algebra and Geometry course in Politecnico di Torino. 
+## Numerical Computing MATLAB Questions
+This repository includes MATLAB questions and their answers of Linear Algebra and Geometry course in Politecnico di Torino. 
 
 The story behind the project is that while we were studying for a MATLAB exam, we decided to take notes on the questions. At some point, we had the idea of sharing these notes online so that they could be useful as a study resource for all students preparing for the exam. We hope it helps.
 
@@ -22,16 +22,6 @@ The course subjects divided into 7 sub-subjects in portale.
 
 ### [Eigenvalues and matrix factorizations (W14)](#eigenvalues-and-matrix-factorizations-w14-1)
 
-There are also 4 summarizing tests whose questions are more indicative of the types that will be used during the final test in the lab. Several topics are addressed in each quiz.
-
-### [Quiz 0 (W5)](#quiz-0-w5-1)
-
-### [Quiz 1 (W9)](#quiz-1-w9-1)
-
-### [Quiz 2 (W10)](#quiz-2-w10-1)
-
-### [Quiz 3 (W14)](#quiz-3-w14-1)
-
 ### Checkout [this section](#how-to-add-a-question-to-this-repository) below, if you want to add questions to this repository.
 
 ### For any problem or any recommendations, you can reach editors directly from [telegram group](https://t.me/numericalComputing) or  [email](mailto:itshuseyingulec@gmail.com).
@@ -49,7 +39,7 @@ A note from Professor;
 #### Q1
 ![](questions/syntax-level1/syntax-level1-1.png "Q1")
 
-It asks us to write these equations in matlab. First, we can eliminate the wrong ones, in matlab after an `if` statement we use `elseif` statement to add another condition so we can eliminate option A, B and C. We have D and E options left. There is only one different in these options, `&&` and `&`. Both are logical `AND` operations. The `&&` though, is a "short-circuit" operator. 
+It asks us to write these equations in MATLAB. First, we can eliminate the wrong ones, in MATLAB after an `if` statement we use `elseif` statement to add another condition so we can eliminate option A, B and C. We have D and E options left. There is only one different in these options, `&&` and `&`. Both are logical `AND` operations. The `&&` though, is a "short-circuit" operator. 
 
 From the MATLAB documentation: "They are short-circuit operators in that they evaluate their second operand only when the result is not fully determined by the first operand."
 
@@ -84,7 +74,7 @@ Correct answer is `A`.
 #### Q4
 ![](questions/syntax-level1/syntaxlevel1-4.png "Q4")
 
-From Matlab documentation: `clc` clears all the text from the Command Window, resulting in a clear screen. 
+From MATLAB documentation: `clc` clears all the text from the Command Window, resulting in a clear screen. 
 
 Correct answer is `A`
 
@@ -105,7 +95,7 @@ Correct answer is `D`
 #### Q7
 ![](questions/syntax-level1/syntaxlevel1-7.png "Q7")
 
-From Matlab documentation: `clear` removes all variables from the current workspace, releasing them from system memory. `clear` removes a global variable from the current workspace but not other workspaces. 
+From MATLAB documentation: `clear` removes all variables from the current workspace, releasing them from system memory. `clear` removes a global variable from the current workspace but not other workspaces. 
 
 Correct answer is `B`
 
@@ -119,49 +109,49 @@ Correct answer is `C`
 #### Q9
 ![](questions/syntax-level1/syntaxlevel1-9.png "Q9")
 
-From Matlab documentation: A./B divides each element of A by the corresponding element of B. A and B must have compatible sizes. In the simplest cases, they can be the same size or one can be a scalar. 
+From MATLAB documentation: A./B divides each element of A by the corresponding element of B. A and B must have compatible sizes. In the simplest cases, they can be the same size or one can be a scalar. 
 
 Correct answer is `A`
 
 #### Q10
 ![](questions/syntax-level1/syntaxlevel1-10.png "Q10")
 
-From Matlab documentation: contour(Z) creates a contour plot containing the isolines of matrix Z, where Z contains height values on the x-y plane. MATLAB® automatically selects the contour lines to display. The column and row indices of Z are the x and y coordinates in the plane, respectively. For more [checkout here](https://www.google.com/search?q=contour+level+curves+in+matlab&tbm=isch&ved=2ahUKEwiU8IjZjpT_AhXGyQIHHapECNMQ2-cCegQIABAA&oq=contour+level+curves+in+matlab&gs_lcp=CgNpbWcQAzoECCMQJ1CJDVjoF2DXG2gAcAB4AIABeYgBmAWSAQM4LjGYAQCgAQGqAQtnd3Mtd2l6LWltZ8ABAQ&sclient=img&ei=qT1xZNT3GMaTi-gPqomhmA0&bih=936&biw=882). 
+From MATLAB documentation: contour(Z) creates a contour plot containing the isolines of matrix Z, where Z contains height values on the x-y plane. MATLAB® automatically selects the contour lines to display. The column and row indices of Z are the x and y coordinates in the plane, respectively. For more [checkout here](https://www.google.com/search?q=contour+level+curves+in+MATLAB&tbm=isch&ved=2ahUKEwiU8IjZjpT_AhXGyQIHHapECNMQ2-cCegQIABAA&oq=contour+level+curves+in+MATLAB&gs_lcp=CgNpbWcQAzoECCMQJ1CJDVjoF2DXG2gAcAB4AIABeYgBmAWSAQM4LjGYAQCgAQGqAQtnd3Mtd2l6LWltZ8ABAQ&sclient=img&ei=qT1xZNT3GMaTi-gPqomhmA0&bih=936&biw=882). 
 
 Correct answer is `D`
 
 #### Q11 
 ![](questions/syntax-level1/syntaxlevel1-11.png "Q11")
 
-`.^`  Array power. From Matlab documentation: "A.^B denotes element-by-element powers. A and B must have compatible sizes. In the simplest cases, they can be the same size or one can be a scalar." We can eliminate option B, C and E from this definition. For option D, it doesn't needs to be n x n, we can use `.^` operator with 2 x 3 and 1 x 3 matrices so we can eliminate D. 
+`.^`  Array power. From MATLAB documentation: "A.^B denotes element-by-element powers. A and B must have compatible sizes. In the simplest cases, they can be the same size or one can be a scalar." We can eliminate option B, C and E from this definition. For option D, it doesn't needs to be n x n, we can use `.^` operator with 2 x 3 and 1 x 3 matrices so we can eliminate D. 
 
 Correct answer is `A`
 
 #### Q12 
 ![](questions/syntax-level1/syntaxlevel1-12.png "Q12")
 
-From matlab documentation: "`>`  Greater than operator. A > B does element by element comparisons between A and B and returns an array with elements set to logical 1 (TRUE) where the relation is true and elements set to logical 0 (FALSE) where it is not." 
+From MATLAB documentation: "`>`  Greater than operator. A > B does element by element comparisons between A and B and returns an array with elements set to logical 1 (TRUE) where the relation is true and elements set to logical 0 (FALSE) where it is not." 
 
 Correct answer is `E`
 
 #### Q13
 ![](questions/syntax-level1/syntaxlevel1-13.png "Q13")
 
-For this kind of questions, we need to be careful for small details. Question asked us to plot the function in an interval. We have x values in [1, 2] interval so we will use `plot` function because while using `fplot` function we define a function generally and let Matlab choose the x values and compute the y values. With this information, we can eliminate `fplot`, options B and E. In options A and C, there are typos in y function, it needs to be `y=x.^2+log(x)`. Be careful while using `.^`operator. 
+For this kind of questions, we need to be careful for small details. Question asked us to plot the function in an interval. We have x values in [1, 2] interval so we will use `plot` function because while using `fplot` function we define a function generally and let MATLAB choose the x values and compute the y values. With this information, we can eliminate `fplot`, options B and E. In options A and C, there are typos in y function, it needs to be `y=x.^2+log(x)`. Be careful while using `.^`operator. 
 
 Correct answer is `D` 
 
 #### Q14
 ![](questions/syntax-level1/syntaxlevel1-14.png "Q14")
 
-Unlike other code languages Python and Javascript, in Matlab indexing starts from 1. To get an index from given x vector, simply we can use `x(start index : number of steps : end index)`. 
+Unlike other code languages Python and Javascript, in MATLAB indexing starts from 1. To get an index from given x vector, simply we can use `x(start index : number of steps : end index)`. 
 
 Correct answer is `A`
 
 #### Q15
 ![](questions/syntax-level1/syntaxlevel1-15.png "Q15")
 
-From Matlab documentation: 
+From MATLAB documentation: 
 ```
 while expression
     statements
@@ -174,17 +164,254 @@ end
 ```
 Correct answer is `D`
 
-
-
 ## Syntax - Level 2 (W2)
 
-***Questions will be added for this subject.***
+#### Q1
+
+![](questions/syntax-level2/syntax2-1.png "Syntax2 Q1")
+
+The command `A = fix(rand(2, 8) * 12)` generates a matrix A ∈ ℝ^(2×8) of random integers between 0 and 12 in MATLAB.
+
+`rand(2, 8)` generates a matrix of random numbers between 0 and 1 with dimensions 2×8, similar to the previous explanation.
+
+`* 12` scales the random numbers by multiplying them by 12, similar to the previous explanation.
+
+`fix()` is a MATLAB function that rounds each element of the matrix towards zero to obtain the nearest integer. In this case, it ensures that the elements of the matrix are integers rather than floating-point numbers.
+
+Correct answer is `A`.
+#### Q2
+
+![](questions/syntax-level2/syntax2-2.png "Syntax2 Q2")
+
+From MATLAB documentation: "Use the vector of logical values as an index to view the values in A that are greater than 10."
+```
+A(A>10)
+```
+
+Correct answer is `E`.
+#### Q3
+
+![](questions/syntax-level2/syntax2-3.png "Syntax2 Q3")
+
+The command that allows us to compute the spectral radius of a matrix A in MATLAB is `max(abs(eig(A)))`.
+
+Correct answer is `A`.
+
+#### Q4
+
+![](questions/syntax-level2/syntax2-4.png "Syntax2 Q4")
+
+`-2*eye(5)` creates a 5x5 matrix with -2 on the diagonal and zeros elsewhere. The `eye(5)` function generates a 5x5 identity matrix, and multiplying it by -2 gives a matrix with -2 on the diagonal.
+
+`diag(ones(1,4),1)` creates a 5x5 matrix with ones on the first upper diagonal (above the main diagonal) and zeros elsewhere. The `ones(1,4)` function generates a row vector of four ones, and `diag(..., 1)` places these ones on the first upper diagonal.
+
+`diag(ones(1,4),-1)` creates a 5x5 matrix with ones on the first lower diagonal (below the main diagonal) and zeros elsewhere. The `diag(..., -1)` places the ones on the first lower diagonal.
+
+Correct answer is `D`.
+
+#### Q5
+
+![](questions/syntax-level2/syntax2-5.jpg "Syntax2 Q5")
+
+To obtain an appropriate plot of the function f(x)=sin(1/x) with the range 0.01 < x < 1 in MATLAB, we can use the `semilogx` function.
+
+The `semilogx` function is specifically designed for plotting data on a logarithmic scale along the x-axis. In this case, since the range includes values close to zero, a logarithmic scale for the x-axis can be helpful to visualize the function properly.
+
+In other words, in this question our x values are close to 0 and in a logaritmic scale(small number or big number) so we use `semilogx`.
+
+Correct answer is `A`.
+
+#### Q6
+
+![](questions/syntax-level2/syntax2-6.jpg "Syntax2 Q6")
+
+The question asks us to plot two functions, on the interval [0,2] in a single figure using MATLAB. To do this, we need to define a range of x-values within the interval [0,2]. Then, calculate the corresponding y-values for each function using element-wise operations. Next, create a new figure and plot the first and second function, using the same plot function. 
+
+Correct answer is `C`.
+
+#### Q7
+
+![](questions/syntax-level2/syntax2-7.jpg "Syntax2 Q7")
+
+To correctly represent the function y=e^x^2 for the range 0 < x < 4 in MATLAB the appropriate command is `semilogy`.
+
+The `semilogy` function is used to plot data on a logarithmic scale along the y-axis. Since the function can have a wide range of values, a logarithmic scale on the y-axis can help visualize it properly.
+
+Correct answer is `A`.
+
+#### Q8
+
+![](questions/syntax-level2/syntax2-8.jpg "Syntax2 Q8")
+
+```
+clear all
+
+for k = 1:100
+    x(k) = log(k)+sqrt(k);
+    y(k) = k/(6*pi);
+end
+format short e
+dot(x,y)
+```
+
+Correct answer is 3.2498e+03, in this case, `C`.
+
+#### Q9
+
+![](questions/syntax-level2/syntax2-9.jpg "Syntax2 Q9")
+
+```
+clear all
+
+A = linspace(28, 52, 1000);
+A(2:2:end) = A(2:2:end) * 2;
+A(1:2:end) = A(1:2:end) * 5;
+
+format long e
+A(456)
+```
+
+`linspace(28, 52, 1000)` generates a vector A of 1000 linearly spaced elements between 28 and 52.
+
+`A(2:2:end)` selects the even-indexed components of the vector A.
+
+`A(2:2:end) = A(2:2:end) * 2` multiplies the even-indexed components by 2.
+
+`A(1:2:end)` selects the odd-indexed components of the vector A.
+
+`A(1:2:end) = A(1:2:end) * 5` multiplies the odd-indexed components by 5.
+
+Correct answer is 7.786186186186185e+01, in this case, `D`.
+
 
 ## Machine Arithmetic (W2)
 
-***Questions will be added for this subject.***
+#### Q1
+
+![](questions/machine-arithmetic/machine-1.jpg "Machine Q1")
+
+The question is asking us to approximate the limit of a function as it approaches zero. We are given a formula, L, which approximates the limit, and we need to determine the value of n that provides the most accurate result. Basically question asks us in which n value, error is the lowest. 
+
+```
+clear all
+errmin=10;
+i=0;
+for n=1:14
+    h=10^(-n);
+    y=(1-cos(h))/(h^2);
+    err=abs(y-(1/2))/(1/2);
+    if err<errmin
+        errmin=err;
+        i=n;
+    end
+end
+i
+```
+
+The code calculates the relative errors for the approximations of the limit for different values of n and determines the n value that gives the smallest error, indicating the most accurate result. 
+
+Correct answer is 4, in this case, `D`.
+
+#### Q2
+
+![](questions/machine-arithmetic/machine-2.jpg "Machine Q2")
+
+For this kind of question, there is a formula which is;
+```
+For q>0 (N-1)*(N^(t-1))*(U-L+1)
+For q>1 (N-1)*(N^(t-1))*(U-L)
+U = upper bound
+L = lower bound
+```
+In this question, it asks us to find strictly positive numbers so we will use the first formula.
+
+Correct answer is 24, in this case, `E`.
+
+#### Q3
+
+![](questions/machine-arithmetic/machine-3.jpg "Machine Q3")
+
+The question asks us to compute the quantities y using two different formulas for two sets of data. One formula involves directly subtracting square roots, while the other avoids numerical cancellation. We need to evaluate the relative errors between the results obtained from the two formulas for each set of data.
+```
+clear all
+% set 1
+x1=1.7;
+d1=2.1*10^(-9);
+y=sqrt(x1+d1)-sqrt(x1);
+y1=d1/(sqrt(x1+d1)+sqrt(x1));
+err1=abs(y-y1)/abs(y1)
+
+% set 2
+x2=31000;
+d2=7.1*10^(-4);
+y2=sqrt(x2+d2)-sqrt(x2);
+y3=d2/(sqrt(x2+d2)+sqrt(x2));
+err2=abs(y2-y3)/abs(y3)
+```
+
+In the matlab code, first we define x, d and function y. Then we found y1 by multiplying y with its conjugate pair. At the end we found relative error by using given relative error formula in the question. We did this for both cases.
+
+Correct answer is `A`
+
+#### Q4
+
+![](questions/machine-arithmetic/machine-4.jpg "Machine Q4")
+
+For this kind of question, there is a formula which is;
+```
+For q>0 (N-1)*(N^(t-1))*(U-L+1)
+For q>1 (N-1)*(N^(t-1))*(U-L)
+U = upper bound
+L = lower bound
+```
+In this question, it asks us to find the numbers strictly larger than 1 so we will use the second formula.
+
+Correct answer is 6, in this case, `E`.
+
+#### Q5
+
+![](questions/machine-arithmetic/machine-5.jpg "Machine Q5")
+
+The question asks us to compute the relative errors with respect to π for a given sequence. We need to calculate the values of the sequence for n = 1 to 40 and compare them to the value of π, computing the relative error for each iteration. Finally, we find the minimum relative error among these calculations.
+```
+clear all
+
+x(1)=2;
+for n=2:40
+    x(n)=2.^(n-1/2).*sqrt(1-sqrt(1-4.^(1-n).*x(n-1).^2));
+end
+min(abs(x-pi))/pi
+```
+
+Correct answer is 3.8764e-10, in this case, `B`.
+
+#### Q6
+
+![](questions/machine-arithmetic/machine-6.jpg "Machine Q6")
+
+For this question, we need to first define the y and x values. Then we need to find the y1 by multiplying y with its conjugate pair. Then we calculate relative error by using its formula `abs(y-y1)/abs(y1)`
+
+```
+clear all
+
+x = 10^-6;
+y = 1-sqrt(1+x.^2);
+y1 = -x.^2/(1+sqrt(1+x.^2));
+abs(y-y1)/abs(y1);
+```
+
+Correct answer is 8.8901e-05, in this case, `D`.
+
+#### Q7
+
+![](questions/machine-arithmetic/machine-7.png "Machine Q7")
+
+This question asks us to represent the number `a` with base N=10,  t=8 digit after `0,` and rounding even tecnique which means at the end we need to round the closest even number. 
+
+Correct answer is 0.10034712 . 10^3, in this case `E`.
 
 ## Interpolation (W5)
+
 #### Q1
 
 ![](questions/interpolation/interpolation-1.png "Interpolation Q1")
@@ -203,7 +430,9 @@ Therefore, the correct answer is `E) no, since the interpolating polynomial has 
 
 ![](questions/interpolation/interpolation-2.png "Interpolation Q2")
 
-An explanation will be added for this question.
+In MATLAB, the spline function does not directly provide an option to specify the order of the spline. By default, the spline function constructs a piecewise cubic spline, which is a third-order spline.
+
+Correct answer is `none of the alternatives`, in this case, `D`.
 
 #### Q3
 
@@ -242,9 +471,181 @@ y1= polyval(p,x1)
 Correct answer is 0.3812, in this case, `D`.
 
 #### Q4
+
+![](questions/interpolation/interpolation-4.png "Interpolation Q4")
+
+Basically, if there are n points, it should be n-1 degree. In this question, it is given n+1 points.
+
+Correct answer `n`, in this case, `D`.
+
 #### Q5
+
+![](questions/interpolation/interpolation-5.png "Interpolation Q5")
+
+In interpolation, we use n-1 degree from given n points. In cubic spline, ax^3+bx^2+cx+d, there are 4 coefficients so for n-1 degree, we will have 4*(n-1) conditions.
+
+Correct answer is `B`.
+
 #### Q6
 
+![](questions/interpolation/interpolation-6.png "Interpolation Q6")
+
+Lagrange fundamental polynomial is [1, 0, 0] specifically asked to use. 
+
+In the matlab, there is no `lagr` function so we can eliminate these options. 
+
+In the question, it is asked to built to the first three nodes so we need use n-1 degree which is 2. 
+
+Correct answer is `D`.
+
+#### Q7
+
+![](questions/interpolation/interpolation-7.jpg "Interpolation Q7")
+
+It is asked to find coefficient of the second order term. Polyfit function gives us coefficients of the polynomial. 
+
+```
+clear all
+x = [1, 2, 3, 4];
+y = [1, -1, 1, -1];
+c=polyfit(x,y,3); 
+c(2)
+```
+
+We define first x and y values, then we use polyfit and use 3 because we have 4 points so we need to use n-1 degree. Polyfit function gives us coefficients so c(2) will give us the coeefficient of second order-term.
+
+Correct answer is 10, in this case, `D`.
+
+#### Q8
+
+![](questions/interpolation/interpolation-8.jpg "Interpolation Q8")
+
+In this question, it is asked to interpolate the given data in with spline function. Basically we need to define x, y and z values then use the spline function.
+
+```
+clear all
+x = [-1, 1, 7, 9, 19];
+y = [4, 3, 10, 10, 9];
+z = log(0.9);
+spline(x,y,z)
+```
+
+Correct answer is 3.0762e+00, in this case, `A`.
+
+#### Q9
+
+![](questions/interpolation/interpolation-9.jpg "Interpolation Q9")
+
+In this question, it is asked to interpolate the given data in with spline function. Basically we need to define x, y and z values then use the spline function.
+
+```
+clear all
+x = [-5, 4, 5, 11];
+y = [6, 2, 4, 10]
+z = sqrt(1.8);
+y0 = 10;
+yn = 4;
+
+spline(x, [y0, y, yn], z)
+```
+
+Correct answer is 6.7247e+00, in this case, `D`.
+ #### Q10
+
+![](questions/interpolation/interpolation-10.jpg "Interpolation Q10")
+
+We are asked to find the coefficient of the first-degree term in a polynomial that interpolates the function f(x) = √(1 + x^2) in the interval [0, 5]. The polynomial is constructed using 5 Chebyshev nodes, which are specific points determined by a formula. By calculating the Chebyshev nodes, mapping them to the interval [0, 5], evaluating the function at those points, and performing polynomial interpolation, we can determine the coefficient of the first-degree term in the polynomial approximation.
+```
+clear all
+
+f=@(x) sqrt(1+x.^2);
+a=0; b=5; n=4; 
+for i=1:(n+1) % we have 5 nodes so we set n=4
+    t(i)=-cos((((2.*i)-1)*pi)./(2*(n+1)));
+    x(i)=(((b-a)/2).*t(i))+((b+a)/2); % general formula
+end
+y=f(x);
+c=polyfit(x,y,n); % normally we use n-1 but we already set n = 4
+c(4) % prints the coefficient of first degree 
+```
+
+The code defines a function f(x) that calculates the square root of (1 + x^2). It sets the interval [a, b] to be [0, 5] and the number of Chebyshev nodes n to be 4. It then generates the Chebyshev nodes within the interval and maps them to [a, b]. The function f(x) is evaluated at these nodes, and the polyfit function performs polynomial interpolation. Finally, the code prints the coefficient of the first-degree term of the interpolated polynomial.
+
+Correct answer is 0.1166, in this case, `B`.
+
+#### Q11
+
+![](questions/interpolation/interpolation-11.jpg "Interpolation Q11")
+
+In this question, it is asked to interpolate the given data in with spline function. Basically we need to define x and z values, y function then use the spline function.
+
+```
+clear all
+x = [0, 0.5, 1, 1.5, 2];
+y = (sin(x)-(x+1).^2)./((x.^2)+3);
+z = 1.97;
+spline(x,y,z)
+```
+
+Correct answer is -1.148, in this case `D`.
+
+#### Q12 
+
+![](questions/interpolation/interpolation-12.jpg "Interpolation Q12")
+
+In this question, it is asked to interpolate the given data. Basically we need to define x and y values then use first polyfit then polyval in the given point.
+
+```
+clear all
+x = [3, 6, 7, 14, 21];
+y = [8, 4, 5, 5, 7];
+z = exp(0.7);
+c = polyfit(x,y,4); % 5 points, should be 4 degre
+polyval(c,z)
+```
+
+Correct answer is 1.383776857236245e+01, in this case, `B`.
+
+#### Q13
+
+![](questions/interpolation/interpolation-15.jpg "Interpolation Q13")
+
+The question asks us to compute the polynomial of higher degree that interpolates the function f(x) = arctan(x (x+1)) using 8 linearly spaced points on the interval [0, 1], including the extrema. We need to perform polynomial interpolation using these points and calculate the interpolation error at specific values like 0.5 and 0.7. By subtracting the interpolated polynomial's values at these points from the true function values, we can determine the interpolation error at those particular points.
+```
+clear all
+
+n=8;
+f=@(x) atan(x.*(x+1));
+x=linspace(0,1,n);
+y=f(x);
+c=polyfit(x,y,(n-1));
+p1=polyval(c,0.5);
+err1=abs(f(0.5)-p1) 
+
+p2=polyval(c,0.7);
+err2=abs(f(0.7)-p2)
+```
+
+The code computes the polynomial of higher degree that interpolates the function using 8 points on the interval. It evaluates the function at the interpolation points and performs polynomial interpolation using the polyfit function. The code then calculates the interpolation error at specific values, such as 0.5 and 0.7, by comparing the true function values with the values obtained from the interpolated polynomial. The absolute difference between the true function values and the interpolated polynomial values represents the interpolation error at those specific points.
+
+Correct answer is `approximately 1.28e-05 and 4.88e-06, respectively`, in this case, `D`.
+
+#### Q14
+
+![](questions/interpolation/interpolation-16.jpg "Interpolation Q14")
+
+In this question, it is asked to interpolate the given data. Basically we need to define x and y values then use first polyfit then polyval in the given point.
+
+```
+clear all
+x = linspace(0, 2*pi, 4);
+f = @(x) cos(x);
+y = f(x);
+c = polyfit(x,y,3); % 4 points, should be 3 degree
+p = polyval(c,pi/8)
+```
+
+Correct answer is 6.0449e-01, in this case, `A`.
 
 ## Linear Systems - 1 (W9)
 
@@ -322,7 +723,7 @@ Correct answer is 23.9216, in this case, `E`.
 
 The question asks us to analyze the properties of a given matrix B.
 
-First of, we can find the matrix B by using basic matlab code. 
+First of, we can find the matrix B by using basic MATLAB code. 
 
 ```
 clear all
@@ -343,7 +744,7 @@ In option A, it is said that matrix B is not symmetric which means matrix B does
 
 In linear algebra, a square matrix B is said to be diagonalizable if it can be written in the form B = PDP', where P is an orthogonal matrix and D is a diagonal matrix. In option B, it is said that the matrix B is diagonalizable by orthogonal matrices which means that we can find an orthogonal matrix P and a diagonal matrix D such that B = PDP'. In the context of the given matrix B, we know that B is symmetric. For symmetric matrices, it is always possible to diagonalize them using orthogonal matrices. This property is known as the Spectral Theorem for Symmetric Matrices so option B is True.
 
-In option C, it is said that the matrix norm of B, is approximately 10. We can find this by using matlab code after creating matrix B, ```norm(B, 2)``` so in this case it is 97,2442, approximately 100. Therefore, the option C is false.
+In option C, it is said that the matrix norm of B, is approximately 10. We can find this by using MATLAB code after creating matrix B, ```norm(B, 2)``` so in this case it is 97,2442, approximately 100. Therefore, the option C is false.
 
 In option D, it is said that the matrix B does not have three real positive eigenvalues. However, based on the given matrix B, we can find that all its eigenvalues(by using ```eig(B)``` code) (approximately  0.0037, 2.7521, 97.2442) are real and positive. Therefore, the option D is false.
 
@@ -374,7 +775,7 @@ end
 w(3)
 ```
 
-In the first part of the matlab code, it creates a vector `x` with 10 equally spaced points between -1 and 1 using the linspace function.
+In the first part of the MATLAB code, it creates a vector `x` with 10 equally spaced points between -1 and 1 using the linspace function.
 
 Then, it generates a Vandermonde matrix A using the vector `x`. Each column of the matrix A is formed by raising the corresponding element of the vector `x` to a power.
 
@@ -576,7 +977,7 @@ Correct answer is 1.0000e+01, in this case, `E`.
 
 The question is asking us to perform 8 iterations of the QR method on the Hilbert matrix of order 12, starting with matrix A₀ = A. The Hilbert matrix is a specific type of matrix where its entries are given by the formula A(i, j) = 1 / (i + j - 1).
 
-The QR method is an iterative numerical algorithm used to find the eigenvalues (and eigenvectors) of a matrix. In each iteration, the matrix A is decomposed into a product of an orthogonal matrix Q and an upper triangular matrix R. The resulting matrix R is then multiplied by Q to obtain the updated matrix A for the next iteration which is A = R*Q in matlab.
+The QR method is an iterative numerical algorithm used to find the eigenvalues (and eigenvectors) of a matrix. In each iteration, the matrix A is decomposed into a product of an orthogonal matrix Q and an upper triangular matrix R. The resulting matrix R is then multiplied by Q to obtain the updated matrix A for the next iteration which is A = R*Q in MATLAB.
 
 The question specifically asks for the approximate value of element A₈(3,3) after 8 iterations of the QR method. This means we need to perform the QR iterations as described above and retrieve the value at the third row and third column of the resulting matrix A after 8 iterations.
 
@@ -638,7 +1039,7 @@ Correct answer is `D`.
 
 The question asks us to perform calculations on a given matrix A and find the 1-norm of a specific eigenvector.
 
-The matrix A is of order 100, meaning it is a square matrix with dimensions 100x100. The elements of A are defined using the formula a_{ij}=(1+i+j)/(1+|i-j|), where i and j are the row and column indices, respectively.
+The matrix A is of order 100, meaning it is a square matrix with dimensions 100x100. The elements of A are defined using the formula a_{ij}=(1+i+j)/(1+abs(i-j)), where i and j are the row and column indices, respectively.
 
 Our task is to find the eigenvalue of A that is closest to p=100. An eigenvalue of a matrix is a scalar value that, when multiplied by its corresponding eigenvector, gives back the same vector. In this case, we need to find the eigenvalue that is closest to p=100.
 
@@ -665,7 +1066,7 @@ format short e
 norm(w,1)
 ```
 
-In the matlab code, first we have defined our order(n) and an empty matrix A with zeros(100). Then we defined the matrix A with given formula inside of a for loop.
+In the MATLAB code, first we have defined our order(n) and an empty matrix A with zeros(100). Then we defined the matrix A with given formula inside of a for loop.
 
 Then we set `p` to 100, which indicates the desired number of eigenvalues and eigenvectors to be computed.
 
@@ -739,23 +1140,6 @@ After the loop, `approximated_val=eig(A)` computes all the eigenvalues of matrix
 Finally, `err=abs(radius1-radius2)/abs(radius1)` calculates the relative error.
 
 Correct answer is 1.2867e-09, in this case, `A`.
-
-## Quiz 0 (W5)
-
-
-***Questions will be added for this subject.***
-
-## Quiz 1 (W9)
-
-***Questions will be added for this subject.***
-
-## Quiz 2 (W10)
-
-***Questions will be added for this subject.***
-
-## Quiz 3 (W14)
-
-***Questions will be added for this subject.***
 
 ### How to add a question to this repository?
 
