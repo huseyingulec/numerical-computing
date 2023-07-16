@@ -411,6 +411,7 @@ This question asks us to represent the number `a` with base N=10,  t=8 digit aft
 Correct answer is 0.10034712 . 10^3, in this case `E`.
 
 ## Interpolation (W5)
+
 #### Q1
 
 ![](questions/interpolation/interpolation-1.png "Interpolation Q1")
@@ -473,7 +474,7 @@ Correct answer is 0.3812, in this case, `D`.
 
 ![](questions/interpolation/interpolation-4.png "Interpolation Q4")
 
-Basically, if there n points, it should be n-1 degree. In this question, it is given n+1 points.
+Basically, if there are n points, it should be n-1 degree. In this question, it is given n+1 points.
 
 Correct answer `n`, in this case, `D`.
 
