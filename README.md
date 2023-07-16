@@ -553,6 +553,25 @@ Correct answer is 6.7247e+00, in this case, `D`.
 
 ![](questions/interpolation/interpolation-10.jpg "Interpolation Q10")
 
+We are asked to find the coefficient of the first-degree term in a polynomial that interpolates the function f(x) = √(1 + x^2) in the interval [0, 5]. The polynomial is constructed using 5 Chebyshev nodes, which are specific points determined by a formula. By calculating the Chebyshev nodes, mapping them to the interval [0, 5], evaluating the function at those points, and performing polynomial interpolation, we can determine the coefficient of the first-degree term in the polynomial approximation.
+```
+clear all
+
+f=@(x) sqrt(1+x.^2);
+a=0; b=5; n=4; 
+for i=1:(n+1) % we have 5 nodes so we set n=4
+    t(i)=-cos((((2.*i)-1)*pi)./(2*(n+1)));
+    x(i)=(((b-a)/2).*t(i))+((b+a)/2); % general formula
+end
+y=f(x);
+c=polyfit(x,y,n); % normally we use n-1 but we already set n = 4
+c(4) % prints the coefficient of first degree 
+```
+
+The code defines a function f(x) that calculates the square root of (1 + x^2). It sets the interval [a, b] to be [0, 5] and the number of Chebyshev nodes n to be 4. It then generates the Chebyshev nodes within the interval and maps them to [a, b]. The function f(x) is evaluated at these nodes, and the polyfit function performs polynomial interpolation. Finally, the code prints the coefficient of the first-degree term of the interpolated polynomial.
+
+Correct answer is 0.1166, in this case, `B`.
+
 #### Q11
 
 ![](questions/interpolation/interpolation-11.jpg "Interpolation Q11")
@@ -589,6 +608,26 @@ Correct answer is 1.383776857236245e+01, in this case, `B`.
 #### Q13
 
 ![](questions/interpolation/interpolation-15.jpg "Interpolation Q13")
+
+The question asks us to compute the polynomial of higher degree that interpolates the function f(x) = arctan(x (x+1)) using 8 linearly spaced points on the interval [0, 1], including the extrema. We need to perform polynomial interpolation using these points and calculate the interpolation error at specific values like 0.5 and 0.7. By subtracting the interpolated polynomial's values at these points from the true function values, we can determine the interpolation error at those particular points.
+```
+clear all
+
+n=8;
+f=@(x) atan(x.*(x+1));
+x=linspace(0,1,n);
+y=f(x);
+c=polyfit(x,y,(n-1));
+p1=polyval(c,0.5);
+err1=abs(f(0.5)-p1) 
+
+p2=polyval(c,0.7);
+err2=abs(f(0.7)-p2)
+```
+
+The code computes the polynomial of higher degree that interpolates the function using 8 points on the interval. It evaluates the function at the interpolation points and performs polynomial interpolation using the polyfit function. The code then calculates the interpolation error at specific values, such as 0.5 and 0.7, by comparing the true function values with the values obtained from the interpolated polynomial. The absolute difference between the true function values and the interpolated polynomial values represents the interpolation error at those specific points.
+
+Correct answer is `approximately 1.28e-05 and 4.88e-06, respectively`, in this case, `D`.
 
 #### Q14
 
