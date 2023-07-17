@@ -733,7 +733,17 @@ Correct answer is 2.4013, in this case, `E`.
 
 ![](questions/linearsystems1/linear1-5.jpg "Linear1 Q5")
 
+We are given a square matrix A of size 100. The matrix has the following properties: the elements on the main diagonal are all equal to 4, the elements on the first upper and lower codiagonals are all equal to -1, and the elements on the tenth upper and lower codiagonals are all equal to -2.
 
+The question asks us to compute the condition number of matrix A in the infinite norm. The condition number is calculated in the infinite norm. The final result should be rounded to the first decimal digit.
+```
+clear all
+A = 4*eye(100) + (-1)*diag(ones(99,1),1) + (-1)*diag(ones(99,1),-1)+(-2)*diag(ones(90,1),10)+(-2)*diag(ones(90,1),-10);
+c = cond(A,inf)
+round(c,1)
+```
+
+Correct answer is 576.5, in this case, `A`. 
 
 #### Q6
 
