@@ -798,7 +798,145 @@ Correct answer is 0.4467, in this case, `A`.
 
 ## Linear Systems - 2 (W9)
 
-***Questions will be added for this subject.***
+#### Q1
+
+![](questions/linearsystems2/linear2-1.jpg "Linear2 Q1")
+
+In this question, it is asked to find the coefficients of the regression line. Since it is a line, its degree is 1. In the code, we will define our x and y values, then we will use `polyfit` function.
+
+```
+clear all
+x=[0,1,2];
+y=[1,2,4];
+c=polyfit(x,y,1)
+```
+
+Correct answer is a = 1.50 and b = 0.83, in this case, `E`.
+
+#### Q2
+
+![](questions/linearsystems2/linear2-2.jpg "Linear2 Q2")
+
+In this question, it is asked to find a specific value after building a parabola. Since it's a parabola, its degree is 2. First, we'll define the x and y values, then we will use the `polyfit` function, then we'll use the `polyval` function in order to get the value of 3. Lastly, we'll use the given formula to find the value. 
+
+```
+clear all
+x=[-2, -1.3, -1, -0.7, -0.4, -0.1];
+y=[0.3, 0.5, 1.5, 1.3, 0.8, 0.1];
+c=polyfit(x,y,2);
+p3=polyval(c,3);
+abs(p3-1.5)
+```
+
+Correct answer is 17.7300, in this case, `C`.
+
+
+#### Q3
+
+![](questions/linearsystems2/linear2-3.jpg "Linear2 Q3")
+
+We are asked to approximate the function f(x) = x*sin(x) using a parabola. To do this, we consider N=30 linearly spaced nodes between 0 and π/2. These nodes are used to create data points (x_i, f(x_i)). We need to find the coefficients of the parabola. Specifically, we are asked to determine the coefficient of the maximum degree term in the parabola.
+
+```
+clear all
+
+n=30;
+f=@(x) x.*sin(x);
+x=linspace(0,1/2*pi);
+y=f(x);
+c=polyfit(x,y,2)
+c(1)
+```
+
+Corrent answer is 0.3776, in this case, `A`.
+
+#### Q4
+
+![](questions/linearsystems2/linear2-4.jpg "Linear2 Q4")
+
+In this question, it is asked to find the coefficients of the straight line.Since it is a line, its degree is 1. We will define our x and y values, then we will use `polyfit` function. 
+
+```
+clear all
+
+x=[0.2, 1.14, 0.54, 0.87, 1.25, 2.36, 0.19, 0.54, 0.51, 0.33]; 
+y=[1.25, 2.36, 2.58, 1.87, 2.68, 3.41, 0.65, 0.47, 1.36, 1.25]; 
+c=polyfit(x,y,1)
+```
+
+Correct answer is 1.187, in this case, `C`.
+
+#### Q5
+
+![](questions/linearsystems2/linear2-5.jpg "Linear2 Q5")
+
+We are given data regarding the speed of a body at different points in time. Our x values are the time values, which are [0, 8, 18] seconds, and the corresponding y values are the speed values, which are [44, 43, 67] meters per second. The question asks us to approximate this data using a least square line, which is its degree 1. We need to determine the velocity of the body after 2 seconds by evaluating the line at that time point.
+
+```
+clear all
+
+x=[0, 8, 18];
+y=[44, 43, 67];
+c=polyfit(x,y,1); 
+polyval(c,2)
+```
+
+Correct answer is 4.25081967e+01, in this case, `B`.
+
+#### Q6
+
+![](questions/linearsystems2/linear2-6.jpg "Linear2 Q6")
+
+We are given a set of points (x, y) and we want to approximate these points using a second-degree exponential polynomial of the form p_e(x) = a * e^(2x) + b * e^x + c. The polynomial has three coefficients: 'a', 'b', and 'c'. We need to determine the approximate value of the coefficient 'a' that provides the best least square approximation for the given set of points.
+
+```
+clear all
+
+x=[0.34, 0.19, 0.25, 0.61, 0.47, 0.35, 0.83];
+y=[0.58, 0.54, 0.91, 0.28, 0.75, 1.17, 0.38];
+z=exp(x);
+c=polyfit(z,y,2)
+c(1)
+```
+
+Correct answer is  -0.18, in this case, `B`.
+
+#### Q7
+
+![](questions/linearsystems2/linear2-7.jpg "Linear2 Q7")
+
+In this question, it is asked to find the coefficients of the regression line, which means its degree is 1. We will define our x and y values, then we will use `polyfit` function. Then, we will find the norm of the residual.
+
+```
+clear all
+x=[0,1,2,3];
+y=[1,2,4,8];
+z=exp(x);
+c=polyfit(z,y,1)
+p=polyval(c,z);
+res=norm(p-y)
+```
+
+Correct answer is a_0 = 9.65e-01, a_1 = 3.57e-01, and r = 5.33e-01, in this case, `E`.
+
+#### Q8
+
+![](questions/linearsystems2/linear2-8.jpg "Linear2 Q8")
+
+We are asked to approximate the function f(x) = x^2*log(1+x) using a polynomial p(x) of degree 4. We need to build the polynomial p(x) by fitting it to 22 nodes in the interval [0, 5]. The question specifically asks us to find the approximate value of p(2), which is the value of the polynomial at x = 2.
+
+```
+clear all
+
+n=22;
+f=@(x) x.^2.*log(1+x);
+x=linspace(0,5,n);
+y=f(x);
+c=polyfit(x,y,4);
+p=polyval(c,2)
+```
+
+Correct answer is 4.4056, in this case, `D`.
 
 ## Eigenvalues and Matrix Factorizations (W14)
 
