@@ -802,7 +802,7 @@ Correct answer is 0.4467, in this case, `A`.
 
 ![](questions/linearsystems2/linear2-1.jpg "Linear2 Q1")
 
-In this question, it is asked to find the coefficients of the regression line, which means its degree is 1. We will define our x and y values, then we will use `polyfit` function.
+In this question, it is asked to find the coefficients of the regression line. Since it is a line, its degree is 1. In the code, we will define our x and y values, then we will use `polyfit` function.
 
 ```
 clear all
@@ -817,7 +817,7 @@ Correct answer is a = 1.50 and b = 0.83, in this case, `E`.
 
 ![](questions/linearsystems2/linear2-2.jpg "Linear2 Q2")
 
-In this question, it is asked to find a specific value, after building a parabola. Since it's a parabola, the degree has to be 2. First, we'll define the x and y values, then we will use the `polyfit` function, then we'll use the `polyval` function in order to get the value of 3. Lastly, we'll use the given formula to find the value. 
+In this question, it is asked to find a specific value after building a parabola. Since it's a parabola, its degree is 2. First, we'll define the x and y values, then we will use the `polyfit` function, then we'll use the `polyval` function in order to get the value of 3. Lastly, we'll use the given formula to find the value. 
 
 ```
 clear all
@@ -835,7 +835,7 @@ Correct answer is 17.7300, in this case, `C`.
 
 ![](questions/linearsystems2/linear2-3.jpg "Linear2 Q3")
 
-We are asked to approximate the function f(x) = x*sin(x) using a parabola. To do this, we consider N=30 linearly spaced nodes between 0 and π/2. These nodes are used to create data points (x_i, f(x_i)). We need to find the coefficients of the parabola.Specifically, we are asked to determine the coefficient of the maximum degree term in the parabola.
+We are asked to approximate the function f(x) = x*sin(x) using a parabola. To do this, we consider N=30 linearly spaced nodes between 0 and π/2. These nodes are used to create data points (x_i, f(x_i)). We need to find the coefficients of the parabola. Specifically, we are asked to determine the coefficient of the maximum degree term in the parabola.
 
 ```
 clear all
@@ -854,7 +854,7 @@ Corrent answer is 0.3776, in this case, `A`.
 
 ![](questions/linearsystems2/linear2-4.jpg "Linear2 Q4")
 
-In this question, it is asked to find the coefficients of the straight line, which means its degree is 1. We will define our x and y values, then we will use `polyfit` function. 
+In this question, it is asked to find the coefficients of the straight line.Since it is a line, its degree is 1. We will define our x and y values, then we will use `polyfit` function. 
 
 ```
 clear all
@@ -870,7 +870,7 @@ Correct answer is 1.187, in this case, `C`.
 
 ![](questions/linearsystems2/linear2-5.jpg "Linear2 Q5")
 
-We are given data regarding the speed of a body at different points in time. Our x values are the time values, which are [0, 8, 18] seconds, and the corresponding y values are the speed values, which are [44, 43, 67] meters per second. The question asks us to approximate this data using a least square line, which is degree 1. We need to determine the velocity of the body after 2 seconds by evaluating the line at that time point.
+We are given data regarding the speed of a body at different points in time. Our x values are the time values, which are [0, 8, 18] seconds, and the corresponding y values are the speed values, which are [44, 43, 67] meters per second. The question asks us to approximate this data using a least square line, which is its degree 1. We need to determine the velocity of the body after 2 seconds by evaluating the line at that time point.
 
 ```
 clear all
