@@ -5,7 +5,7 @@ The story behind the project is that while we were studying for a MATLAB exam, w
 
 We solved questions from portale of Polito and we tried to simplify the questions as much as possible with our explanations. 
 
-## Subjects
+## Subjects (Total `77` question)
 The course subjects divided into 7 sub-subjects in portale. 
 
 ### [Syntax - Level 1 (W2)](#syntax---level-1-w2-1)
