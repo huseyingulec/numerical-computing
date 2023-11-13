@@ -24,8 +24,6 @@ The course subjects divided into 7 sub-subjects in portale.
 
 ### Checkout [this section](#how-to-add-a-question-to-this-repository) below, if you want to add questions to this repository.
 
-### For any problem or any recommendations, you can reach editors directly from [telegram group](https://t.me/numericalComputing) or  [email](mailto:itshuseyingulec@gmail.com).
-
 A note from Professor; 
 1. Questions should **not be considered exhaustive of the course program**. Moreover, some questions are proposed with a high level of heterogeneity in terms of complexity.
 2. The scores assigned during these quizzes are not related to the difficulty of the question.
@@ -1396,9 +1394,7 @@ Correct answer is 1.2867e-09, in this case, `A`.
 
 ### How to add a question to this repository?
 
-If you could not find the question that you are looking for, you can send the question to the [telegram group](https://t.me/numericalComputing).
-
-Or, if you are comfortable with using Github, you can directly contribute to the project by following these steps:
+If you are comfortable with using Github, you can directly contribute to the project by following these steps:
 
 1. Firstly, you can fork this repository into your Github.  
 2. After making sure that the questions doesn't exist in this repository, you can add your question to the related subject with your explanation.
