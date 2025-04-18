@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "postbuild": "pagefind --site .next/server/app --output-path public/_pagefind",
-    "deploy": "gh-pages -d out"
+    "deploy": "gh-pages -d out --nojekyll --cname https://huseyingulec.github.io/numerical-computing/"
   },
   "repository": {
     "type": "module",
