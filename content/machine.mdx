@@ -1,0 +1,129 @@
+---
+title: Machine Arithmetic
+---
+
+## Machine Arithmetic (W2)
+
+#### - Q1 -
+
+![](/questions/machine-arithmetic/machine-1.jpg "Machine Q1")
+
+The question is asking us to approximate the limit of a function as it approaches zero. We are given a formula, L, which approximates the limit, and we need to determine the value of n that provides the most accurate result. Basically question asks us in which n value, error is the lowest. 
+
+```
+clear all
+errmin=10;
+i=0;
+for n=1:14
+    h=10^(-n);
+    y=(1-cos(h))/(h^2);
+    err=abs(y-(1/2))/(1/2);
+    if err<errmin
+        errmin=err;
+        i=n;
+    end
+end
+i
+```
+
+The code calculates the relative errors for the approximations of the limit for different values of n and determines the n value that gives the smallest error, indicating the most accurate result. 
+
+Correct answer is 4, in this case, `D`.
+
+#### - Q2 -
+
+![](/questions/machine-arithmetic/machine-2.jpg "Machine Q2")
+
+For this kind of question, there is a formula which is;
+```
+For q>0 (N-1)*(N^(t-1))*(U-L+1)
+For q>1 (N-1)*(N^(t-1))*(U-L)
+U = upper bound
+L = lower bound
+```
+In this question, it asks us to find strictly positive numbers so we will use the first formula.
+
+Correct answer is 24, in this case, `E`.
+
+#### - Q3 -
+
+![](/questions/machine-arithmetic/machine-3.jpg "Machine Q3")
+
+The question asks us to compute the quantities y using two different formulas for two sets of data. One formula involves directly subtracting square roots, while the other avoids numerical cancellation. We need to evaluate the relative errors between the results obtained from the two formulas for each set of data.
+```
+clear all
+% set 1
+x1=1.7;
+d1=2.1*10^(-9);
+y=sqrt(x1+d1)-sqrt(x1);
+y1=d1/(sqrt(x1+d1)+sqrt(x1));
+err1=abs(y-y1)/abs(y1)
+
+% set 2
+x2=31000;
+d2=7.1*10^(-4);
+y2=sqrt(x2+d2)-sqrt(x2);
+y3=d2/(sqrt(x2+d2)+sqrt(x2));
+err2=abs(y2-y3)/abs(y3)
+```
+
+In the matlab code, first we define x, d and function y. Then we found y1 by multiplying y with its conjugate pair. At the end we found relative error by using given relative error formula in the question. We did this for both cases.
+
+Correct answer is `A`
+
+#### - Q4 -
+
+![](/questions/machine-arithmetic/machine-4.jpg "Machine Q4")
+
+For this kind of question, there is a formula which is;
+```
+For q>0 (N-1)*(N^(t-1))*(U-L+1)
+For q>1 (N-1)*(N^(t-1))*(U-L)
+U = upper bound
+L = lower bound
+```
+In this question, it asks us to find the numbers strictly larger than 1 so we will use the second formula.
+
+Correct answer is 6, in this case, `E`.
+
+#### - Q5 -
+
+![](/questions/machine-arithmetic/machine-5.jpg "Machine Q5")
+
+The question asks us to compute the relative errors with respect to π for a given sequence. We need to calculate the values of the sequence for n = 1 to 40 and compare them to the value of π, computing the relative error for each iteration. Finally, we find the minimum relative error among these calculations.
+```
+clear all
+
+x(1)=2;
+for n=2:40
+    x(n)=2.^(n-1/2).*sqrt(1-sqrt(1-4.^(1-n).*x(n-1).^2));
+end
+min(abs(x-pi))/pi
+```
+
+Correct answer is 3.8764e-10, in this case, `B`.
+
+#### - Q6 -
+
+![](/questions/machine-arithmetic/machine-6.jpg "Machine Q6")
+
+For this question, we need to first define the y and x values. Then we need to find the y1 by multiplying y with its conjugate pair. Then we calculate relative error by using its formula `abs(y-y1)/abs(y1)`
+
+```
+clear all
+
+x = 10^-6;
+y = 1-sqrt(1+x.^2);
+y1 = -x.^2/(1+sqrt(1+x.^2));
+abs(y-y1)/abs(y1);
+```
+
+Correct answer is 8.8901e-05, in this case, `D`.
+
+#### - Q7 -
+
+![](/questions/machine-arithmetic/machine-7.png "Machine Q7")
+
+This question asks us to represent the number `a` with base N=10,  t=8 digit after `0,` and rounding even tecnique which means at the end we need to round the closest even number. 
+
+Correct answer is 0.10034712 . 10^3, in this case `E`.
