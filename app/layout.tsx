@@ -45,7 +45,7 @@ export const metadata = {
     type: "website",
     images: [
       {
-        url: "/images/general/matlab-cover.png", // Make sure this matches the one you added earlier
+        url: "/numerical-computing/images/general/matlab-cover.png", // Make sure this matches the one you added earlier
         width: 1200,
         height: 630,
         alt: "Numerical Computing – PoliTO MATLAB",
@@ -89,7 +89,7 @@ export default async function RootLayout({ children }) {
       <Head
       // ... Your additional head options
       >
-        <link rel="shortcut icon" href="/images/general/icon.png" />
+        <link rel="shortcut icon" href="/numerical-computing/images/general/icon.png" />
         {/* Your additional tags should be passed as `children` of `<Head>` element */}
       </Head>
       <body>

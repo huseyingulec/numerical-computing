@@ -7,7 +7,7 @@ title: Interpolation
 
 #### - Q1 -
 
-![](questions/interpolation/interpolation-1.png "Interpolation Q1")
+![](/questions/interpolation/interpolation-1.png "Interpolation Q1")
 
 In the problem, we have a function called f(x) = (1 - x^2)x^3. We want to find a polynomial, let's call it p(x), that passes through 7 equally spaced points on the interval from 0 to 1.
 
@@ -21,7 +21,7 @@ Therefore, the correct answer is `E) no, since the interpolating polynomial has 
 
 #### - Q2 -
 
-![](questions/interpolation/interpolation-2.png "Interpolation Q2")
+![](/questions/interpolation/interpolation-2.png "Interpolation Q2")
 
 In MATLAB, the spline function does not directly provide an option to specify the order of the spline. By default, the spline function constructs a piecewise cubic spline, which is a third-order spline.
 
@@ -29,7 +29,7 @@ Correct answer is `none of the alternatives`, in this case, `D`.
 
 #### - Q3 -
 
-![](questions/interpolation/interpolation-3.png "Interpolation Q3")
+![](/questions/interpolation/interpolation-3.png "Interpolation Q3")
 
 To interpolate the function f(x) = sin(x) with a polynomial of higher degree using 5 linearly spaced nodes in the interval [0, π], including the extrema, When we say "linearly spaced nodes including extrema," it means that we want to choose equidistant points within the interval [0, π], with the endpoints 0 and π included. In this case, with 5 linearly spaced nodes, we will have the following x-values:
 
@@ -65,7 +65,7 @@ Correct answer is 0.3812, in this case, `D`.
 
 #### - Q4 -
 
-![](questions/interpolation/interpolation-4.png "Interpolation Q4")
+![](/questions/interpolation/interpolation-4.png "Interpolation Q4")
 
 Basically, if there are n points, it should be n-1 degree. In this question, it is given n+1 points.
 
@@ -73,7 +73,7 @@ Correct answer `n`, in this case, `D`.
 
 #### - Q5 -
 
-![](questions/interpolation/interpolation-5.png "Interpolation Q5")
+![](/questions/interpolation/interpolation-5.png "Interpolation Q5")
 
 In interpolation, we use n-1 degree from given n points. In cubic spline, ax^3+bx^2+cx+d, there are 4 coefficients so for n-1 degree, we will have 4*(n-1) conditions.
 
@@ -81,7 +81,7 @@ Correct answer is `B`.
 
 #### - Q6 -
 
-![](questions/interpolation/interpolation-6.png "Interpolation Q6")
+![](/questions/interpolation/interpolation-6.png "Interpolation Q6")
 
 Lagrange fundamental polynomial is [1, 0, 0] specifically asked to use. 
 
@@ -93,7 +93,7 @@ Correct answer is `D`.
 
 #### - Q7 -
 
-![](questions/interpolation/interpolation-7.jpg "Interpolation Q7")
+![](/questions/interpolation/interpolation-7.jpg "Interpolation Q7")
 
 It is asked to find coefficient of the second order term. Polyfit function gives us coefficients of the polynomial. 
 
@@ -111,7 +111,7 @@ Correct answer is 10, in this case, `D`.
 
 #### - Q8 -
 
-![](questions/interpolation/interpolation-8.jpg "Interpolation Q8")
+![](/questions/interpolation/interpolation-8.jpg "Interpolation Q8")
 
 In this question, it is asked to interpolate the given data in with spline function. Basically we need to define x, y and z values then use the spline function.
 
@@ -127,7 +127,7 @@ Correct answer is 3.0762e+00, in this case, `A`.
 
 #### - Q9 -
 
-![](questions/interpolation/interpolation-9.jpg "Interpolation Q9")
+![](/questions/interpolation/interpolation-9.jpg "Interpolation Q9")
 
 In this question, it is asked to interpolate the given data in with spline function. Basically we need to define x, y and z values then use the spline function.
 
@@ -145,7 +145,7 @@ spline(x, [y0, y, yn], z)
 Correct answer is 6.7247e+00, in this case, `D`.
  #### - Q10 -
 
-![](questions/interpolation/interpolation-10.jpg "Interpolation Q10")
+![](/questions/interpolation/interpolation-10.jpg "Interpolation Q10")
 
 We are asked to find the coefficient of the first-degree term in a polynomial that interpolates the function f(x) = √(1 + x^2) in the interval [0, 5]. The polynomial is constructed using 5 Chebyshev nodes, which are specific points determined by a formula. By calculating the Chebyshev nodes, mapping them to the interval [0, 5], evaluating the function at those points, and performing polynomial interpolation, we can determine the coefficient of the first-degree term in the polynomial approximation.
 ```
@@ -168,7 +168,7 @@ Correct answer is 0.1166, in this case, `B`.
 
 #### - Q11 -
 
-![](questions/interpolation/interpolation-11.jpg "Interpolation Q11")
+![](/questions/interpolation/interpolation-11.jpg "Interpolation Q11")
 
 In this question, it is asked to interpolate the given data in with spline function. Basically we need to define x and z values, y function then use the spline function.
 
@@ -184,7 +184,7 @@ Correct answer is -1.148, in this case `D`.
 
 #### - Q12 - 
 
-![](questions/interpolation/interpolation-12.jpg "Interpolation Q12")
+![](/questions/interpolation/interpolation-12.jpg "Interpolation Q12")
 
 In this question, it is asked to interpolate the given data. Basically we need to define x and y values then use first polyfit then polyval in the given point.
 
@@ -201,7 +201,7 @@ Correct answer is 1.383776857236245e+01, in this case, `B`.
 
 #### - Q13 -
 
-![](questions/interpolation/interpolation-15.jpg "Interpolation Q13")
+![](/questions/interpolation/interpolation-15.jpg "Interpolation Q13")
 
 The question asks us to compute the polynomial of higher degree that interpolates the function f(x) = arctan(x (x+1)) using 8 linearly spaced points on the interval [0, 1], including the extrema. We need to perform polynomial interpolation using these points and calculate the interpolation error at specific values like 0.5 and 0.7. By subtracting the interpolated polynomial's values at these points from the true function values, we can determine the interpolation error at those particular points.
 ```
@@ -225,7 +225,7 @@ Correct answer is `approximately 1.28e-05 and 4.88e-06, respectively`, in this c
 
 #### - Q14 -
 
-![](questions/interpolation/interpolation-16.jpg "Interpolation Q14")
+![](/questions/interpolation/interpolation-16.jpg "Interpolation Q14")
 
 In this question, it is asked to interpolate the given data. Basically we need to define x and y values then use first polyfit then polyval in the given point.
 
