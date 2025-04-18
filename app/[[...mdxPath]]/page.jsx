@@ -1,4 +1,3 @@
-import { useRouter } from "next/router";
 import { getStaticPropsForPage, loadPage } from "nextra/page";
 
 export async function generateStaticParams() {
