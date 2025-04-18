@@ -1,7 +1,7 @@
 ---
-title: Eigenvalues and Matrix Factorizations 
+title: Eigenvalues and Matrix Factorizations
+description: A comprehensive guide to eigenvalue problems, matrix factorizations, and numerical methods including Power Method, QR decomposition, SVD, and condition numbers. Contains worked examples using MATLAB for finding spectral radii, analyzing matrix properties, and solving linear systems.
 ---
-
 
 ## Eigenvalues and Matrix Factorizations (W14)
 
@@ -41,14 +41,14 @@ Correct answer is 23.9216, in this case, `E`.
 
 The question asks us to analyze the properties of a given matrix B.
 
-First of, we can find the matrix B by using basic MATLAB code. 
+First of, we can find the matrix B by using basic MATLAB code.
 
 ```
 clear all
 A = [2 3 4; 3 4 6; 1 0 3];
 B = A'*A
 
-ans = 
+ans =
         B =
 
             14    18    29
@@ -56,21 +56,21 @@ ans =
             29    36    61
 ```
 
-With this information, we can analyze given statements in the question. 
+With this information, we can analyze given statements in the question.
 
 In option A, it is said that matrix B is not symmetric which means matrix B does not equal to its transpose but as we saw from the matrix B, it is symmetric so option A is false.
 
 In linear algebra, a square matrix B is said to be diagonalizable if it can be written in the form B = PDP', where P is an orthogonal matrix and D is a diagonal matrix. In option B, it is said that the matrix B is diagonalizable by orthogonal matrices which means that we can find an orthogonal matrix P and a diagonal matrix D such that B = PDP'. In the context of the given matrix B, we know that B is symmetric. For symmetric matrices, it is always possible to diagonalize them using orthogonal matrices. This property is known as the Spectral Theorem for Symmetric Matrices so option B is True.
 
-In option C, it is said that the matrix norm of B, is approximately 10. We can find this by using MATLAB code after creating matrix B, ```norm(B, 2)``` so in this case it is 97,2442, approximately 100. Therefore, the option C is false.
+In option C, it is said that the matrix norm of B, is approximately 10. We can find this by using MATLAB code after creating matrix B, `norm(B, 2)` so in this case it is 97,2442, approximately 100. Therefore, the option C is false.
 
-In option D, it is said that the matrix B does not have three real positive eigenvalues. However, based on the given matrix B, we can find that all its eigenvalues(by using ```eig(B)``` code) (approximately  0.0037, 2.7521, 97.2442) are real and positive. Therefore, the option D is false.
+In option D, it is said that the matrix B does not have three real positive eigenvalues. However, based on the given matrix B, we can find that all its eigenvalues(by using `eig(B)` code) (approximately 0.0037, 2.7521, 97.2442) are real and positive. Therefore, the option D is false.
 
 In option E, it is said that the matrix B does not have three orthogonal eigenvalues. This option implies that the eigenvalues of B are not mutually orthogonal. To determine whether this is true, we need to calculate the eigenvectors of B. However, the given information does not provide us with the eigenvectors. Therefore, we cannot conclude whether B has three orthogonal eigenvalues or not.
 
 Correct answer is `B`.
 
-#### - Q3  -
+#### - Q3 -
 
 ![](/questions/eigenvalues/eigen-3.jpg "Eigenvalues Q3")
 
@@ -157,7 +157,7 @@ First we defined matrix A as a tridiagonal matrix of order 18, with diagonal ele
 
 Then we used svd function which is computes the singular value decomposition of matrix A. The output consists of three matrices: U, S, and V. U and V are orthogonal matrices, and S is a diagonal matrix containing the singular values of A.
 
-The equation Ax = b is solved by multiplying the pseudo-inverse of A, given by inv(S) * (U' * b), with b. The resulting vector y represents the solution of the linear system with the coefficient matrix S. Then, the solution vector x is obtained by multiplying V with y.
+The equation Ax = b is solved by multiplying the pseudo-inverse of A, given by inv(S) _ (U' _ b), with b. The resulting vector y represents the solution of the linear system with the coefficient matrix S. Then, the solution vector x is obtained by multiplying V with y.
 
 Finally we calculate the quantity x_2 + y_2 by using `norm` function.
 
@@ -169,7 +169,7 @@ Correct answer is 8.1298e-01, in this case, `A`.
 
 The question asks us to perform certain calculations using the Hilbert matrix, the inverse power method, and the eig command in MATLAB.
 
-Inverse Power Method: The inverse power method is an iterative algorithm used to approximate eigenvalues of a matrix. It relies on the fact that the eigenvector corresponding to the smallest eigenvalue of the matrix A is approximately the limit of the sequence (A - pI)^(-k) * x, where p is an approximation to the desired eigenvalue, I is the identity matrix, k is the number of iterations, and x is the initial unit vector. By applying this iterative process, we can approximate the eigenvalue λ_p that is closest to the value p=0.2. Each iteration involves solving a linear system of equations.
+Inverse Power Method: The inverse power method is an iterative algorithm used to approximate eigenvalues of a matrix. It relies on the fact that the eigenvector corresponding to the smallest eigenvalue of the matrix A is approximately the limit of the sequence (A - pI)^(-k) \* x, where p is an approximation to the desired eigenvalue, I is the identity matrix, k is the number of iterations, and x is the initial unit vector. By applying this iterative process, we can approximate the eigenvalue λ_p that is closest to the value p=0.2. Each iteration involves solving a linear system of equations.
 
 LU decomposition is used in the provided code to solve a system of linear equations efficiently. In the context of the inverse power method, LU decomposition helps in solving the linear systems that arise during each iteration of the method. By utilizing LU decomposition, the question is solved the linear systems (A - pI)x = y during each iteration of the inverse power method more efficiently than direct methods like Gaussian elimination. This helps in improving the overall performance and computational efficiency of the code.
 
@@ -196,12 +196,12 @@ error = abs ( lambda(i+1)-approximated_val ) / abs( approximated_val )
 
 First we define our order(n) and hilbert matrix. Then we use inverse power method, initializes `p` to the desired value (0.2), sets up the initial vector `z` as a vector of ones, and normalizes it to get `w`.
 
-It performs LU decomposition of A - p * eye(n) using the lu function, obtaining the lower triangular matrix L, upper triangular matrix U, and permutation matrix P.
+It performs LU decomposition of A - p \* eye(n) using the lu function, obtaining the lower triangular matrix L, upper triangular matrix U, and permutation matrix P.
 
 The inverse power method is applied iteratively for four iterations. In each iteration:
 
-The equation L * y = P * w is solved using forward substitution to obtain `y`.
-The equation U * z = y is solved using back substitution to obtain `z`.
+The equation L _ y = P _ w is solved using forward substitution to obtain `y`.
+The equation U \* z = y is solved using back substitution to obtain `z`.
 The updated eigenvalue estimate is stored in lambda by adding `p` to the reciprocal of the dot product of `w` and `z`.
 `w` is then updated by normalizing `z`.
 
@@ -220,19 +220,20 @@ The question asks us to calculate the approximate distance, measured in the 2-no
 
 The first thing we need to do is to generate the Pascal matrix of order 8 using the command A = pascal(8). The Pascal matrix is a specific type of matrix where each element is the binomial coefficient of its row and column.
 
-Then we need to calculate the set of matrices with rank 5 using Singular Value Decomposition (SVD). The Singular Value Decomposition (SVD) is a matrix factorization technique that decomposes a matrix into three matrices: U, S, and V. For a given matrix A, the SVD is represented as A = U * S * V', where U and V are orthogonal matrices (U'U = V'V = I) and S is a diagonal matrix containing the singular values of A.
+Then we need to calculate the set of matrices with rank 5 using Singular Value Decomposition (SVD). The Singular Value Decomposition (SVD) is a matrix factorization technique that decomposes a matrix into three matrices: U, S, and V. For a given matrix A, the SVD is represented as A = U _ S _ V', where U and V are orthogonal matrices (U'U = V'V = I) and S is a diagonal matrix containing the singular values of A.
 
 In this case, we want to find the set of matrices with rank 5. By performing the SVD on matrix A, we can extract the singular values and vectors that represent the importance of each dimension in A. The singular values in the diagonal matrix S are sorted in descending order, indicating their relative significance. By keeping only the first five singular values and their corresponding singular vectors, we can construct a matrix A_rank_5 with rank 5.
 
-After obtaining the singular value decomposition (A = U * S * V'), we truncate(cut) the matrices U, S, and V to only include the information related to the first five singular values. By multiplying the truncated matrices, U(:, 1:5), S(1:5, 1:5), and V(:, 1:5)', we obtain the reconstructed matrix A_rank_5 with rank 5.
+After obtaining the singular value decomposition (A = U _ S _ V'), we truncate(cut) the matrices U, S, and V to only include the information related to the first five singular values. By multiplying the truncated matrices, U(:, 1:5), S(1:5, 1:5), and V(:, 1:5)', we obtain the reconstructed matrix A_rank_5 with rank 5.
 
 The purpose of this is to create a matrix that retains the most significant components of the original matrix A. By using only the first five singular values and their corresponding singular vectors, we effectively reduce the rank of the matrix to 5 while capturing the essential features of the original matrix.
 
 By calculating the distance between the original matrix A and the reconstructed matrix A_rank_5, we can measure how far they are from each other in terms of the 2-norm. This distance provides an indication of how well the rank-5 approximation represents the original matrix. It allows us to quantify the loss of information or the approximation error between the two matrices.
+
 ```
 clear all
 
-A = pascal(8); 
+A = pascal(8);
 
 [U, S, V] = svd(A);
 A_rank_5 = U(:, 1:5) * S(1:5, 1:5) * V(:, 1:5)';
@@ -246,7 +247,7 @@ Correct answer is 8.3730e-02, in this case, `C`
 
 ![](/questions/eigenvalues/eigen-8.jpg "Eigenvalues Q8")
 
-First of all, let's analyze the question.  Let x be a vector made of 10 equally spaced elements in the interval [0,1] which means the vector x contains 10 values that are evenly spaced between 0 and 1.
+First of all, let's analyze the question. Let x be a vector made of 10 equally spaced elements in the interval [0,1] which means the vector x contains 10 values that are evenly spaced between 0 and 1.
 
 The command `A=vander(x)` generates a Vandermonde matrix using the vector x. A Vandermonde matrix is a special type of matrix where each column is formed by raising the corresponding element of the input vector to a power. In this case, each column of A will contain powers of the elements in vector x.
 
@@ -281,9 +282,9 @@ Then, it performs a low-rank approximation of the matrix A by selecting the domi
 2. S(1:7, 1:7) selects the top-left 7x7 block from the matrix S, which includes the dominant singular values.
 3. V(:, 1:7) selects the columns 1 to 7 from the matrix V, corresponding to the dominant right singular vectors.
 
-Multiplying these three matrices together, U(:, 1:7) * S(1:7, 1:7) * V(:, 1:7)', produces the low-rank approximation matrix An.
+Multiplying these three matrices together, U(:, 1:7) _ S(1:7, 1:7) _ V(:, 1:7)', produces the low-rank approximation matrix An.
 
-Finally, it calculates the infinity norm of the matrix `An` using the norm function with the argument `inf`. The `inf` argument specifies that the infinity norm should be computed. 
+Finally, it calculates the infinity norm of the matrix `An` using the norm function with the argument `inf`. The `inf` argument specifies that the infinity norm should be computed.
 
 In the given code, SVD is used to compute the dominant singular values and vectors of the Vandermonde matrix `A`. These dominant components are then used to construct a low-rank approximation matrix `An`. By using SVD, we can effectively analyze the structure of `A` and derive a reduced-rank approximation, which can be useful in various applications such as data compression, noise reduction, and dimensionality reduction.
 
@@ -295,12 +296,12 @@ Correct answer is 1.0000e+01, in this case, `E`.
 
 The question is asking us to perform 8 iterations of the QR method on the Hilbert matrix of order 12, starting with matrix A₀ = A. The Hilbert matrix is a specific type of matrix where its entries are given by the formula A(i, j) = 1 / (i + j - 1).
 
-The QR method is an iterative numerical algorithm used to find the eigenvalues (and eigenvectors) of a matrix. In each iteration, the matrix A is decomposed into a product of an orthogonal matrix Q and an upper triangular matrix R. The resulting matrix R is then multiplied by Q to obtain the updated matrix A for the next iteration which is A = R*Q in MATLAB.
+The QR method is an iterative numerical algorithm used to find the eigenvalues (and eigenvectors) of a matrix. In each iteration, the matrix A is decomposed into a product of an orthogonal matrix Q and an upper triangular matrix R. The resulting matrix R is then multiplied by Q to obtain the updated matrix A for the next iteration which is A = R\*Q in MATLAB.
 
 The question specifically asks for the approximate value of element A₈(3,3) after 8 iterations of the QR method. This means we need to perform the QR iterations as described above and retrieve the value at the third row and third column of the resulting matrix A after 8 iterations.
 
-``` 
-clear all 
+```
+clear all
 
 format long e
 
@@ -311,6 +312,7 @@ for i=1:8
 end
 A(3,3)
 ```
+
 First line creates a 12x12 Hilbert matrix and assigns it to the variable A. The hilb function generates the Hilbert matrix based on the specified order, in this case, 12.
 
 The for loop performs 8 iterations of the QR method. In each iteration, the qr function decomposes matrix A into an orthogonal matrix Q and an upper triangular matrix R. The updated matrix A is obtained by multiplying R and Q. This process is repeated 8 times, as indicated by the loop.
@@ -349,7 +351,7 @@ For option E, "The power method converges to 8."
 
 -This option is false. The power method converges to the dominant eigenvalue, which is the eigenvalue with the largest magnitude. In this case, the dominant eigenvalue is -8, not 8.
 
-Correct answer is `D`. 
+Correct answer is `D`.
 
 #### - Q11 -
 
@@ -368,7 +370,7 @@ Finally, we need to calculate the 1-norm of the normalized eigenvector. The 1-no
 ```
 clear all
 n = 100;
-A = zeros(n); 
+A = zeros(n);
 
 for i=1:n
     for j=1:n
@@ -444,7 +446,7 @@ radius1=max(abs(approximated_val))
 radius2=max(abs(lambda));
 err=abs(radius1-radius2)/abs(radius1)
 ```
- 
+
 In the code, it sets the value of n to 6, which represents the order of the Hilbert matrix. Then, sets `A=hilb(n)` which generates the Hilbert matrix A of order n.
 
 Then, initializes the vector `z` as a column vector of ones with length n. This vector is used as the initial unit vector.
@@ -453,7 +455,7 @@ Then, it normalizes the initial unit vector `z` by dividing it by its norm. This
 
 Then, the loop `for i=1:6` performs 6 iterations of the power method. Inside the loop, `z=A*w` multiplies the matrix `A` with the vector `w`, resulting in a new vector `z`. `lambda(i)=w'*z` calculates the approximation of the dominant eigenvalue by taking the dot product of `w` and `z`. This value is stored in the array lambda for each iteration. `w=z/norm(z)` normalizes the new vector `z`, producing the updated vector `w` for the next iteration.
 
-After the loop, `approximated_val=eig(A)` computes all the eigenvalues of matrix `A` and stores them in the array `approximated_val`. `radius1=max(abs(approximated_val))` finds the maximum absolute value among the eigenvalues of `A`, giving the approximate value of the spectral radius. `radius2=max(abs(lambda))` finds the maximum absolute value among the values stored in the array lambda, which represents the eigenvalues estimated by the power method. 
+After the loop, `approximated_val=eig(A)` computes all the eigenvalues of matrix `A` and stores them in the array `approximated_val`. `radius1=max(abs(approximated_val))` finds the maximum absolute value among the eigenvalues of `A`, giving the approximate value of the spectral radius. `radius2=max(abs(lambda))` finds the maximum absolute value among the values stored in the array lambda, which represents the eigenvalues estimated by the power method.
 
 Finally, `err=abs(radius1-radius2)/abs(radius1)` calculates the relative error.
 
