@@ -9,9 +9,9 @@ const withNextra = nextra({
 export default withNextra({
   // ... Other Next.js config options
   basePath: '/numerical-computing', 
+  exportTrailingSlash: true,
   output: 'export',
   images: {
     unoptimized: true,
-    path: '/numerical-computing'
   }
 });
