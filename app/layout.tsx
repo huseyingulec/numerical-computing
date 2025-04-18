@@ -3,6 +3,7 @@ import { Head } from "nextra/components";
 import { getPageMap } from "nextra/page-map";
 import "nextra-theme-docs/style.css";
 import { ThemeSwitch } from "nextra-theme-docs";
+import { ReactNode } from 'react';
 
 export const metadata = {
   title: {
@@ -76,7 +77,11 @@ const navbar = (
 );
 const footer = <Footer>MIT {new Date().getFullYear()} © </Footer>;
 
-export default async function RootLayout({ children }) {
+export default async function RootLayout({
+  children,
+}: {
+  children: ReactNode;
+}) {
   return (
     <html
       // Not required, but good for SEO
@@ -89,7 +94,10 @@ export default async function RootLayout({ children }) {
       <Head
       // ... Your additional head options
       >
-        <link rel="shortcut icon" href="/numerical-computing/images/general/icon.png" />
+        <link
+          rel="shortcut icon"
+          href="/numerical-computing/images/general/icon.png"
+        />
         {/* Your additional tags should be passed as `children` of `<Head>` element */}
       </Head>
       <body>
