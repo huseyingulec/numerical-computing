@@ -1,12 +1,13 @@
 import nextra from "nextra";
 
 const withNextra = nextra({
-    search: true,
-    defaultShowCopyCode: true,
-    
+  search: true,
+  defaultShowCopyCode: true,
 });
 
 export default withNextra({
-    // ... Other Next.js config options
-    // output: 'export'
+  output: "export",
+
+  // ... Other Next.js config options
+  // output: 'export'
 });
