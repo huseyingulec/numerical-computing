@@ -10,11 +10,8 @@ const repoName = "numerical-computing";
 
 export default withNextra({
   output: "export",
-  basePath: isProduction ? `/${repoName}` : "",
-  assetPrefix: isProduction ? `/${repoName}/` : "",
+  // basePath: isProduction ? `/${repoName}` : "",
   images: {
     unoptimized: true,
   },
-  // Required for static export
-  trailingSlash: true,
 });
