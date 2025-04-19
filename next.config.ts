@@ -5,13 +5,16 @@ const withNextra = nextra({
   defaultShowCopyCode: true,
 });
 
-// You can include other Next.js configuration options here, in addition to Nextra settings:
+const isProduction = process.env.NODE_ENV === "production";
+const repoName = "numerical-computing";
+
 export default withNextra({
-  // ... Other Next.js config options
-  basePath: '/numerical-computing', 
-  exportTrailingSlash: true,
-  output: 'export',
+  output: "export",
+  basePath: isProduction ? `/${repoName}` : "",
+  assetPrefix: isProduction ? `/${repoName}/` : "",
   images: {
     unoptimized: true,
-  }
+  },
+  // Required for static export
+  trailingSlash: true,
 });
