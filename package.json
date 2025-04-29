@@ -6,7 +6,6 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "export": "next export",
     "lint": "next lint",
     "postbuild": "pagefind --site .next/server/app --output-path public/_pagefind",
     "deploy": "next build && next export && gh-pages -d out"
