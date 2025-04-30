@@ -3,7 +3,7 @@ import { Head } from "nextra/components";
 import { getPageMap } from "nextra/page-map";
 import "nextra-theme-docs/style.css";
 import { ThemeSwitch } from "nextra-theme-docs";
-import { ReactNode } from 'react';
+import { ReactNode } from "react";
 
 export const metadata = {
   title: {
@@ -94,11 +94,13 @@ export default async function RootLayout({
       <Head
       // ... Your additional head options
       >
-        <link
-          rel="shortcut icon"
-          href="/images/general/icon.png"
-        />
+        <link rel="shortcut icon" href="/images/general/icon.png" />
         {/* Your additional tags should be passed as `children` of `<Head>` element */}
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9376535480087035"
+          crossOrigin="anonymous"
+        ></script>
       </Head>
       <body>
         <Layout
