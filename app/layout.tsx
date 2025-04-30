@@ -96,6 +96,10 @@ export default async function RootLayout({
       >
         <link rel="shortcut icon" href="/images/general/icon.png" />
         {/* Your additional tags should be passed as `children` of `<Head>` element */}
+        <meta
+          name="google-adsense-account"
+          content="ca-pub-9376535480087035"
+        ></meta>
         <script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9376535480087035"
