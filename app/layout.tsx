@@ -4,6 +4,7 @@ import { getPageMap } from "nextra/page-map";
 import "nextra-theme-docs/style.css";
 import { ThemeSwitch } from "nextra-theme-docs";
 import { ReactNode } from "react";
+import Script from "next/script"; // Import the Script component
 
 export const metadata = {
   title: {
@@ -100,17 +101,25 @@ export default async function RootLayout({
           name="google-adsense-account"
           content="ca-pub-9376535480087035"
         ></meta>
-        <script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9376535480087035"
-          crossOrigin="anonymous"
-        ></script>
       </Head>
+      {/* Google Analytics (gtag.js) */}
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-64NN156EFM"
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-64NN156EFM');
+        `}
+      </Script>
       <body>
         <Layout
           navbar={navbar}
           pageMap={await getPageMap()}
-          docsRepositoryBase="https://github.com/huseyingulec/numerical-computing"
+          docsRepositoryBase="https://github.com/huseyingulec/numerical-computing/blob/main"
           footer={footer}
 
           //   lastUpdated={}
